@@ -1,0 +1,518 @@
+.uicon2 {
+  display: inline-block;
+  position: relative;
+  width:  0.5em;      /*  16px */
+  height: 1em;      /*  16px */
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  contain: paint;
+}
+.uicon2::before,
+.uicon2::after {
+  position: absolute;
+  left:   0;
+  top:    0;
+  box-sizing: border-box;
+}
+
+.uicon2-A {
+  background:
+    linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.125em 0.5625em/0.25em 0.125em;
+}
+.uicon2-A::before {
+  content: '';
+  position: absolute;
+  left:   0.09375em;/*  1.5px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em 0.0625em 0 0;
+  background: currentColor;
+  transform: rotate(15deg);
+}
+.uicon2-A::after {
+  content: '';
+  position: absolute;
+  left:   0.28125em;/*  4.5px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em 0.0625em 0 0;
+  background: currentColor;
+  transform: rotate(-15deg);
+}
+.uicon2-B::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.4375em; /*  7px */
+  height: 0.4375em; /*  7px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 0 0.25em 0.25em 0;
+}
+.uicon2-B::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.40623em;/*  6.5px */
+  width:  0.5em;    /*  8px */
+  height: 0.46875em;/*  7.5px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 0 0.25em 0.25em 0;
+}
+.uicon2-C::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5625em; /*  9px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+.uicon2-D::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 0 50% 50% 0;
+}
+.uicon2-E::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-right: none;
+}
+.uicon2-E::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.4375em; /*  7px */
+  width:  0.4375em; /*  7px */
+  height: 0.125em;  /*  2px */
+  background: currentColor;
+}
+.uicon2-F::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0.125em 0 0 0.125em;
+}
+.uicon2-F::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.4375em; /*  7px */
+  width:  0.4375em; /*  7px */
+  height: 0.125em;  /*  2px */
+  background: currentColor;
+}
+.uicon2-G::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5625em; /*  9px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+.uicon2-G::after {
+  content: '';
+  position: absolute;
+  left:   0.25em;   /*  4px */
+  top:    0.5em;    /*  8px */
+  width:  0.25em;   /*  4px */
+  height: 0.375em;  /*  6px */
+  border: solid currentColor; /* 2px */
+  border-width: 0.125em 0.125em 0 0;
+}
+.uicon2-H::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0 0.125em;
+}
+.uicon2-H::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.4375em; /*  7px */
+  width:  0.5em;    /*  8px */
+  height: 0.125em;  /*  2px */
+  background: currentColor;
+}
+.uicon2-I::before {
+  content: '';
+  position: absolute;
+  left:   0.0625em; /*  1px */
+  top:    0.125em;  /*  2px */
+  width:  0.375em;  /*  6px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0.125em 0;
+}
+.uicon2-I::after {
+  content: '';
+  position: absolute;
+  left:   0.1875em; /*  3px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  background: currentColor;
+}
+.uicon2-J::before {
+  content: '';
+  position: absolute;
+  left:   0.375em;  /*  6px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.375em;  /*  6px */
+  background: currentColor;
+}
+.uicon2-J::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.5em;    /*  8px */
+  width:  0.5em;    /*  8px */
+  height: 0.375em;  /*  6px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-top: none;
+  border-radius: 0 0 50% 50%;
+}
+.uicon2-K::before {
+  content: '';
+  position: absolute;
+  left:   0.125em;  /*  2px */
+  top:    0.21875em;/*  3.5px */
+  width:  0.5625em; /*  9px */
+  height: 0.5625em; /*  9px */
+  border: solid currentColor; /* 2px */
+  border-width: 0 0 0.125em 0.125em;
+  transform: rotate(45deg);
+}
+.uicon2-K::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  background: currentColor;
+}
+.uicon2-L::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0 0 0.125em 0.125em;
+}
+.uicon2-M {
+  background:
+    linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0 0.125em/0.125em 0.75em,
+    linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.375em 0.125em/0.125em 0.75em;
+}
+.uicon2-M::before {
+  content: '';
+  position: absolute;
+  left:   0.09375em;/*  1.5px */
+  top:    0.09375em;/*  1.5px */
+  width:  0.125em;  /*  2px */
+  height: 0.625em;  /*  10px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em;
+  background: currentColor;
+  transform: rotate(-20deg);
+}
+.uicon2-M::after {
+  content: '';
+  position: absolute;
+  left:   0.28125em;/*  4.5px */
+  top:    0.09375em;/*  1.5px */
+  width:  0.125em;  /*  2px */
+  height: 0.625em;  /*  10px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em;
+  background: currentColor;
+  transform: rotate(20deg);
+}
+.uicon2-N::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0 0.125em;
+}
+.uicon2-N::after {
+  content: '';
+  position: absolute;
+  left:   0.15625em;/*  2.5px */
+  top:    0.0625em; /*  1px */
+  width:  0.125em;  /*  2px */
+  height: 0.8125em; /*  13px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em;
+  background: currentColor;
+  transform: rotate(-30deg);
+}
+.uicon2-O::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 50%;
+}
+.uicon2-P::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.4375em; /*  7px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 0 0.25em 0.25em 0;
+}
+.uicon2-P::after {
+  content: '';
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  background: currentColor;
+}
+.uicon2-Q::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 50%;
+}
+.uicon2-Q::after {
+  content: '';
+  left:   0.3125em; /*  5px */
+  top:    0.5em;    /*  8px */
+  width:  0.125em;  /*  2px */
+  height: 0.3125em; /*  5px */
+  background: currentColor;
+  transform: rotate(-45deg);
+}
+.uicon2-R {
+  background:
+    linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0 0.125em/0.125em 0.75em;
+}
+.uicon2-R::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.09375em;/*  1.5px */
+  width:  0.5em;    /*  8px */
+  height: 0.4375em; /*  7px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-radius: 0 0.25em 0.25em 0;
+}
+.uicon2-R::after {
+  content: '';
+  left:   0.1875em; /*  3px */
+  top:    0.375em;  /*  6px */
+  width:  0.125em;  /*  2px */
+  height: 0.5625em; /*  9px */
+  background: currentColor;
+  transform: rotate(-45deg);
+}
+.uicon2-S {
+  background:
+    linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.1875em 0.4375em/0.125em 0.125em;
+}
+.uicon2-S::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.0625em; /*  1px */
+  width:  0.5em;    /*  8px */
+  height: 0.5em;    /*  8px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: rotate(60deg);
+}
+.uicon2-S::after {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.4375em; /*  7px */
+  width:  0.5em;    /*  8px */
+  height: 0.5em;    /*  8px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(60deg);
+}
+.uicon2-T::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0.125em 0 0;
+}
+.uicon2-T::after {
+  content: '';
+  position: absolute;
+  left:   0.1875em; /*  3px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  background: currentColor;
+}
+.uicon2-U::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.125em currentColor; /* 2px */
+  border-top: none;
+  border-radius: 0 0 50% 50%;
+}
+.uicon2-V::before {
+  content: '';
+  position: absolute;
+  left:   0.09375em;/*  1.5px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0 0 0.0625em 0.0625em;
+  background: currentColor;
+  transform: rotate(-15deg);
+}
+.uicon2-V::after {
+  content: '';
+  position: absolute;
+  left:   0.28125em;/*  4.5px */
+  top:    0.125em;  /*  2px */
+  width:  0.125em;  /*  2px */
+  height: 0.75em;   /*  12px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0 0 0.0625em 0.0625em;
+  background: currentColor;
+  transform: rotate(15deg);
+}
+
+.uicon2-X::before {
+  content: '';
+  position: absolute;
+  left:   0.1875em; /*  3px */
+  top:    0.0625em; /*  1px */
+  width:  0.125em;  /*  2px */
+  height: 0.875em;  /*  14px */
+  background: currentColor;
+  transform: rotate(-30deg);
+}
+.uicon2-X::after {
+  content: '';
+  position: absolute;
+  left:   0.1875em; /*  3px */
+  top:    0.0625em; /*  1px */
+  width:  0.125em;  /*  2px */
+  height: 0.875em;  /*  14px */
+  background: currentColor;
+  transform: rotate(30deg);
+}
+.uicon2-Y {
+  background:
+    linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.1875em 0.5em/0.125em 0.375em;
+}
+.uicon2-Y::before {
+  content: '';
+  position: absolute;
+  left:   0.0625em; /*  1px */
+  top:    0.0625em; /*  1px */
+  width:  0.125em;  /*  2px */
+  height: 0.5em;    /*  8px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em 0.0625em 0 0;
+  background: currentColor;
+  transform: rotate(-30deg);
+}
+.uicon2-Y::after {
+  content: '';
+  position: absolute;
+  left:   0.3125em; /*  5px */
+  top:    0.0625em; /*  1px */
+  width:  0.125em;  /*  2px */
+  height: 0.5em;    /*  8px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em 0.0625em 0 0;
+  background: currentColor;
+  transform: rotate(30deg);
+}
+.uicon2-Z::before {
+  content: '';
+  position: absolute;
+  left:   0;
+  top:    0.125em;  /*  2px */
+  width:  0.5em;    /*  8px */
+  height: 0.75em;   /*  12px */
+  border: solid currentColor; /* 2px */
+  border-width: 0.125em 0;
+}
+.uicon2-Z::after {
+  content: '';
+  position: absolute;
+  left:   0.1875em; /*  3px */
+  top:    0.0625em; /*  1px */
+  width:  0.125em;  /*  2px */
+  height: 0.8125em; /*  13px */
+  border: solid 0.0625em currentColor; /* 2px */
+  border-radius: 0.0625em;
+  background: currentColor;
+  transform: rotate(35deg);
+}
+
+.uicon2-W {
+  background:
+    linear-gradient(currentColor 100%, red) no-repeat 0 0.125em/0.125em 0.75em,
+    linear-gradient(currentColor 100%, red) no-repeat 0.1875em 0.25em/0.125em 0.625em,
+    linear-gradient(currentColor 100%, red) no-repeat 0.375em 0.125em/0.125em 0.75em,
+    linear-gradient(currentColor 100%, red) no-repeat 0 0.75em/0.5em 0.125em;
+}
+}
