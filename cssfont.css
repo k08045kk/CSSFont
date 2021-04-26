@@ -1,4 +1,4 @@
-.uicon2 {
+.alphabet {
   display: inline-block;
   position: relative;
   width:  0.5em;      /*  16px */
@@ -9,19 +9,21 @@
   box-sizing: border-box;
   contain: paint;
 }
-.uicon2::before,
-.uicon2::after {
+.alphabet::before,
+.alphabet::after {
   position: absolute;
   left:   0;
   top:    0;
   box-sizing: border-box;
 }
 
-.uicon2-A {
+.alphabet-A {
   background:
     linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.125em 0.5625em/0.25em 0.125em;
+  box-sizing: border-box;
+  contain: paint;
 }
-.uicon2-A::before {
+.alphabet-A::before {
   content: '';
   position: absolute;
   left:   0.09375em;/*  1.5px */
@@ -33,7 +35,7 @@
   background: currentColor;
   transform: rotate(15deg);
 }
-.uicon2-A::after {
+.alphabet-A::after {
   content: '';
   position: absolute;
   left:   0.28125em;/*  4.5px */
@@ -45,7 +47,7 @@
   background: currentColor;
   transform: rotate(-15deg);
 }
-.uicon2-B::before {
+.alphabet-B::before {
   content: '';
   position: absolute;
   left:   0;
@@ -55,7 +57,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 0 0.25em 0.25em 0;
 }
-.uicon2-B::after {
+.alphabet-B::after {
   content: '';
   position: absolute;
   left:   0;
@@ -65,7 +67,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 0 0.25em 0.25em 0;
 }
-.uicon2-C::before {
+.alphabet-C::before {
   content: '';
   position: absolute;
   left:   0;
@@ -76,7 +78,7 @@
   border-right-color: transparent;
   border-radius: 50%;
 }
-.uicon2-D::before {
+.alphabet-D::before {
   content: '';
   position: absolute;
   left:   0;
@@ -86,7 +88,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 0 50% 50% 0;
 }
-.uicon2-E::before {
+.alphabet-E::before {
   content: '';
   position: absolute;
   left:   0;
@@ -96,7 +98,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-right: none;
 }
-.uicon2-E::after {
+.alphabet-E::after {
   content: '';
   position: absolute;
   left:   0;
@@ -105,7 +107,7 @@
   height: 0.125em;  /*  2px */
   background: currentColor;
 }
-.uicon2-F::before {
+.alphabet-F::before {
   content: '';
   position: absolute;
   left:   0;
@@ -115,7 +117,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0.125em 0 0 0.125em;
 }
-.uicon2-F::after {
+.alphabet-F::after {
   content: '';
   position: absolute;
   left:   0;
@@ -124,7 +126,7 @@
   height: 0.125em;  /*  2px */
   background: currentColor;
 }
-.uicon2-G::before {
+.alphabet-G::before {
   content: '';
   position: absolute;
   left:   0;
@@ -135,7 +137,7 @@
   border-right-color: transparent;
   border-radius: 50%;
 }
-.uicon2-G::after {
+.alphabet-G::after {
   content: '';
   position: absolute;
   left:   0.25em;   /*  4px */
@@ -145,7 +147,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0.125em 0.125em 0 0;
 }
-.uicon2-H::before {
+.alphabet-H::before {
   content: '';
   position: absolute;
   left:   0;
@@ -155,7 +157,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0 0.125em;
 }
-.uicon2-H::after {
+.alphabet-H::after {
   content: '';
   position: absolute;
   left:   0;
@@ -164,7 +166,7 @@
   height: 0.125em;  /*  2px */
   background: currentColor;
 }
-.uicon2-I::before {
+.alphabet-I::before {
   content: '';
   position: absolute;
   left:   0.0625em; /*  1px */
@@ -174,7 +176,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0.125em 0;
 }
-.uicon2-I::after {
+.alphabet-I::after {
   content: '';
   position: absolute;
   left:   0.1875em; /*  3px */
@@ -183,7 +185,7 @@
   height: 0.75em;   /*  12px */
   background: currentColor;
 }
-.uicon2-J::before {
+.alphabet-J::before {
   content: '';
   position: absolute;
   left:   0.375em;  /*  6px */
@@ -192,7 +194,7 @@
   height: 0.375em;  /*  6px */
   background: currentColor;
 }
-.uicon2-J::after {
+.alphabet-J::after {
   content: '';
   position: absolute;
   left:   0;
@@ -203,7 +205,7 @@
   border-top: none;
   border-radius: 0 0 50% 50%;
 }
-.uicon2-K::before {
+.alphabet-K::before {
   content: '';
   position: absolute;
   left:   0.125em;  /*  2px */
@@ -214,7 +216,7 @@
   border-width: 0 0 0.125em 0.125em;
   transform: rotate(45deg);
 }
-.uicon2-K::after {
+.alphabet-K::after {
   content: '';
   position: absolute;
   left:   0;
@@ -223,7 +225,7 @@
   height: 0.75em;   /*  12px */
   background: currentColor;
 }
-.uicon2-L::before {
+.alphabet-L::before {
   content: '';
   position: absolute;
   left:   0;
@@ -233,12 +235,12 @@
   border: solid currentColor; /* 2px */
   border-width: 0 0 0.125em 0.125em;
 }
-.uicon2-M {
+.alphabet-M {
   background:
     linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0 0.125em/0.125em 0.75em,
     linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.375em 0.125em/0.125em 0.75em;
 }
-.uicon2-M::before {
+.alphabet-M::before {
   content: '';
   position: absolute;
   left:   0.09375em;/*  1.5px */
@@ -250,7 +252,7 @@
   background: currentColor;
   transform: rotate(-20deg);
 }
-.uicon2-M::after {
+.alphabet-M::after {
   content: '';
   position: absolute;
   left:   0.28125em;/*  4.5px */
@@ -262,7 +264,7 @@
   background: currentColor;
   transform: rotate(20deg);
 }
-.uicon2-N::before {
+.alphabet-N::before {
   content: '';
   position: absolute;
   left:   0;
@@ -272,7 +274,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0 0.125em;
 }
-.uicon2-N::after {
+.alphabet-N::after {
   content: '';
   position: absolute;
   left:   0.15625em;/*  2.5px */
@@ -284,7 +286,7 @@
   background: currentColor;
   transform: rotate(-30deg);
 }
-.uicon2-O::before {
+.alphabet-O::before {
   content: '';
   position: absolute;
   left:   0;
@@ -294,7 +296,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 50%;
 }
-.uicon2-P::before {
+.alphabet-P::before {
   content: '';
   position: absolute;
   left:   0;
@@ -304,7 +306,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 0 0.25em 0.25em 0;
 }
-.uicon2-P::after {
+.alphabet-P::after {
   content: '';
   left:   0;
   top:    0.125em;  /*  2px */
@@ -312,7 +314,7 @@
   height: 0.75em;   /*  12px */
   background: currentColor;
 }
-.uicon2-Q::before {
+.alphabet-Q::before {
   content: '';
   position: absolute;
   left:   0;
@@ -322,7 +324,7 @@
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 50%;
 }
-.uicon2-Q::after {
+.alphabet-Q::after {
   content: '';
   left:   0.3125em; /*  5px */
   top:    0.5em;    /*  8px */
@@ -331,21 +333,21 @@
   background: currentColor;
   transform: rotate(-45deg);
 }
-.uicon2-R {
+.alphabet-R {
   background:
     linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0 0.125em/0.125em 0.75em;
 }
-.uicon2-R::before {
+.alphabet-R::before {
   content: '';
   position: absolute;
   left:   0;
-  top:    0.09375em;/*  1.5px */
+  top:    0.125em;  /*  2px */
   width:  0.5em;    /*  8px */
   height: 0.4375em; /*  7px */
   border: solid 0.125em currentColor; /* 2px */
   border-radius: 0 0.25em 0.25em 0;
 }
-.uicon2-R::after {
+.alphabet-R::after {
   content: '';
   left:   0.1875em; /*  3px */
   top:    0.375em;  /*  6px */
@@ -354,11 +356,11 @@
   background: currentColor;
   transform: rotate(-45deg);
 }
-.uicon2-S {
+.alphabet-S {
   background:
     linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.1875em 0.4375em/0.125em 0.125em;
 }
-.uicon2-S::before {
+.alphabet-S::before {
   content: '';
   position: absolute;
   left:   0;
@@ -370,7 +372,7 @@
   border-radius: 50%;
   transform: rotate(60deg);
 }
-.uicon2-S::after {
+.alphabet-S::after {
   content: '';
   position: absolute;
   left:   0;
@@ -382,7 +384,7 @@
   border-radius: 50%;
   transform: rotate(60deg);
 }
-.uicon2-T::before {
+.alphabet-T::before {
   content: '';
   position: absolute;
   left:   0;
@@ -392,7 +394,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0.125em 0 0;
 }
-.uicon2-T::after {
+.alphabet-T::after {
   content: '';
   position: absolute;
   left:   0.1875em; /*  3px */
@@ -401,7 +403,7 @@
   height: 0.75em;   /*  12px */
   background: currentColor;
 }
-.uicon2-U::before {
+.alphabet-U::before {
   content: '';
   position: absolute;
   left:   0;
@@ -412,7 +414,7 @@
   border-top: none;
   border-radius: 0 0 50% 50%;
 }
-.uicon2-V::before {
+.alphabet-V::before {
   content: '';
   position: absolute;
   left:   0.09375em;/*  1.5px */
@@ -424,7 +426,7 @@
   background: currentColor;
   transform: rotate(-15deg);
 }
-.uicon2-V::after {
+.alphabet-V::after {
   content: '';
   position: absolute;
   left:   0.28125em;/*  4.5px */
@@ -437,7 +439,7 @@
   transform: rotate(15deg);
 }
 
-.uicon2-X::before {
+.alphabet-X::before {
   content: '';
   position: absolute;
   left:   0.1875em; /*  3px */
@@ -447,7 +449,7 @@
   background: currentColor;
   transform: rotate(-30deg);
 }
-.uicon2-X::after {
+.alphabet-X::after {
   content: '';
   position: absolute;
   left:   0.1875em; /*  3px */
@@ -457,11 +459,11 @@
   background: currentColor;
   transform: rotate(30deg);
 }
-.uicon2-Y {
+.alphabet-Y {
   background:
     linear-gradient(to left, currentColor 100%, currentColor 0) no-repeat 0.1875em 0.5em/0.125em 0.375em;
 }
-.uicon2-Y::before {
+.alphabet-Y::before {
   content: '';
   position: absolute;
   left:   0.0625em; /*  1px */
@@ -473,7 +475,7 @@
   background: currentColor;
   transform: rotate(-30deg);
 }
-.uicon2-Y::after {
+.alphabet-Y::after {
   content: '';
   position: absolute;
   left:   0.3125em; /*  5px */
@@ -485,7 +487,7 @@
   background: currentColor;
   transform: rotate(30deg);
 }
-.uicon2-Z::before {
+.alphabet-Z::before {
   content: '';
   position: absolute;
   left:   0;
@@ -495,7 +497,7 @@
   border: solid currentColor; /* 2px */
   border-width: 0.125em 0;
 }
-.uicon2-Z::after {
+.alphabet-Z::after {
   content: '';
   position: absolute;
   left:   0.1875em; /*  3px */
@@ -508,11 +510,32 @@
   transform: rotate(35deg);
 }
 
-.uicon2-W {
+.alphabet-W {
   background:
     linear-gradient(currentColor 100%, red) no-repeat 0 0.125em/0.125em 0.75em,
-    linear-gradient(currentColor 100%, red) no-repeat 0.1875em 0.25em/0.125em 0.625em,
-    linear-gradient(currentColor 100%, red) no-repeat 0.375em 0.125em/0.125em 0.75em,
-    linear-gradient(currentColor 100%, red) no-repeat 0 0.75em/0.5em 0.125em;
+    linear-gradient(currentColor 100%, red) no-repeat 0.1875em 0.25em/0.125em 0.5625em,
+    linear-gradient(currentColor 100%, red) no-repeat 0.375em 0.125em/0.125em 0.625em;
 }
+.alphabet-W::before {
+  content: '';
+  left:   0;
+  top:    0.5625em; /*  9px */
+  width:  0.3125em; /*  5px */
+  height: 0.3125em; /*  5px */
+  border: solid 0.125em transparent; /* 2px */
+  border-color: transparent currentColor currentColor transparent; /* 2px */
+  border-radius: 50%;
+  transform: rotate(45deg);
 }
+.alphabet-W::after {
+  content: '';
+  left:   0.1875em; /*  3px */
+  top:    0.5625em; /*  9px */
+  width:  0.3125em; /*  5px */
+  height: 0.3125em; /*  5px */
+  border: solid 0.125em transparent; /* 2px */
+  border-color: transparent currentColor currentColor transparent; /* 2px */
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
