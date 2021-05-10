@@ -81,8 +81,8 @@
                                                                                           .cf7f
 {
   width:  .375em;  /*  6px */
-  height: .5625em; /*  9px */
-  margin: .3125em .0625em 0; /* 5px 1px 0 */
+  height: .5em;    /*  8px */
+  margin: .375em .0625em 0; /* 6px 1px 0 */
   border: solid currentcolor .0625em; /* 1px */
 }
 
@@ -135,44 +135,41 @@
 
 /* 23(35):「#」 */
 .cf23 {
-  background: no-repeat linear-gradient(currentcolor, currentcolor) .03125em .5625em/.40623em .046875em,
-              no-repeat linear-gradient(currentcolor, currentcolor) .0625em .3125em/.40623em .046875em;
-  /*
-  background: no-repeat linear-gradient(currentcolor, currentcolor) .03125em .5625em/.40623em .0625em,
-              no-repeat linear-gradient(currentcolor, currentcolor) .0625em .3125em/.40623em .0625em;
-  */
+  width:  .375em;  /*  6px */
+  height: .375em;  /*  6px */
+  border-style: solid none;
+  margin: .3125em .0625em .1875em;
 }
 .cf23::before {
   content: '';
-  left:   .125em;  /*  2px */
-/*bottom: 0;*/
-  width:  .046875em;/* .75px */
-/*width:  .0625em; /*  1px */
+  left:   .078125em;/* 1.25px */
+  bottom:-.25em;   /*  4px */
+  width:  .0625em; /*  1px */
   height: .75em;   /*  12px */
-  background: currentcolor;
+  border-left-style: solid;
   transform: rotate(5deg);
 }
 .cf23::after {
   content: '';
-  left:   .3125em; /*  5px */
-/*bottom: 0;*/
-  width:  .046875em;/* .75px */
-/*width:  .0625em; /*  1px */
+  left:   .234375em;/* 3.75px */
+  bottom:-.25em;   /*  4px */
+  width:  .0625em; /*  1px */
   height: .75em;   /*  12px */
-  background: currentcolor;
+  border-left-style: solid;
   transform: rotate(5deg);
 }
 .cfb.cf23 {
-  background: no-repeat linear-gradient(currentcolor, currentcolor) .03125em .5625em/.40623em .09375em,
-              no-repeat linear-gradient(currentcolor, currentcolor) .0625em .3125em/.40623em .09375em;
+  border-width: .09375em;
 }
 .cfb.cf23::before {
-  left:   .109375em;/* 1.75px */
-  width:  .09375em;/*  1.5px */
+  left:   .0625em; /*  1px */
+  bottom:-.28125em;/*  4.5px */
+  border-width: .09375em;
 }
 .cfb.cf23::after {
-  left:   .296875em;/* 4.75px */
-  width:  .09375em;/*  1.5px */
+  left:   .21875em;/*  3.5px */
+  bottom:-.28125em;/*  4.5px */
+  border-width: .09375em;
 }
 
 
@@ -228,9 +225,9 @@
 .cf25 {
   width:  .0625em; /*  1px */
   height: .5em;    /*  8px */
-  margin: .25em .21875em .125em; /* 4px 3.5px 2px */
+  margin: .125em .21875em .125em; /* 2px 3.5px 2px */
   border-left-style: solid;
-  transform: rotate(35deg);
+  transform: rotate(45deg);
 }
 .cf25::before {
   content: '';
@@ -252,58 +249,60 @@
 }
 .cfb.cf25 {
   width:  .09375em;/*  1.5px */
-  margin: .25em .203125em .125em; /* 4px 3.25px 2px */
+  margin: .125em .203125em .125em; /* 2px 3.25px 2px */
   border-width: .09375em;
 }
 .cfb.cf25::before {
-  left:  -.375em;  /*  6px */
+  left:  -.40623em;/*  6.5px */
+  width:  .28125em;/*  4.5px */
+  height: .28125em;/*  4.5px */
   border-width: .09375em;
 }
 .cfb.cf25::after {
+  width:  .28125em;/*  4.5px */
+  height: .28125em;/*  4.5px */
   border-width: .09375em;
 }
 
 
 /* 26(38):「&」 */
 .cf26 {
-  background: no-repeat linear-gradient(currentcolor, currentcolor) .28125em .3125em/.046875em .5em,
-              no-repeat linear-gradient(currentcolor, currentcolor) .1875em .4375em/.25em .046875em;
-  /*
-  background: no-repeat linear-gradient(currentcolor, currentcolor) .28125em .3125em/.0625em .5em,
-              no-repeat linear-gradient(currentcolor, currentcolor) .1875em .4375em/.25em .0625em;
-  */
+  width:  .25em;   /*  4px */
+  height: .5625em; /*  9px */
+  border-style: solid none solid solid;
+  border-radius: .0625em 0 0 .0625em;
+  margin: .125em .1875em .1875em .0625em;
 }
 .cf26::before {
   content: '';
-  left:   .0625em; /*  1px */
-  bottom: .375em;  /*  6px */
-  width:  .25em;   /*  4px */
-  height: .3125em; /*  5px */
-  border-style: solid none solid solid;
-  border-radius: 50% 0 0 50%;
+  left:   .125em;  /*  2px */
+  bottom:-.25em;   /*  4px */
+  width:  .1875em; /*  3px */
+  height: .60625em;/*  9.5px */
+  border-style: none none solid solid;
+  border-radius: 0 .125em;
 }
 .cf26::after {
   content: '';
-  left:   .0625em; /*  1px */
-  bottom: .125em;  /*  2px */
-  width:  .25em;   /*  4px */
-  height: .3125em; /*  5px */
-  border-style: solid none solid solid;
-  border-radius: 50% 0 0 50%;
+  left:   0;
+  bottom:-.25em;   /*  4px */
+  width:  .3125em; /*  5px */
+  height: .5em;    /*  8px */
+  border-top-style: solid;
 }
 .cfb.cf26 {
-  background: no-repeat linear-gradient(currentcolor, currentcolor) .265625em .3125em/.09375em .5em,
-              no-repeat linear-gradient(currentcolor, currentcolor) .25em .40623em/.1875em .09375em;
+  border-width: .09375em;
 }
 .cfb.cf26::before {
-  height: .34375em;/*  5.5px */
+  left:   .09375em;/*  1.5px */
+  bottom:-.28125em;/*  4.5px */
   border-width: .09375em;
 }
 .cfb.cf26::after {
-  height: .34375em;/*  5.5px */
+  left:  -.03125em;/*  .5px */
+  bottom:-.265625em;/* 4.25px */
   border-width: .09375em;
 }
-
 
 /* 27(39):「'」 */
 .cf27::after {
@@ -446,7 +445,7 @@
   content: '';
   width:  .375em;  /*  6px */
 /*height: 0;*/
-  border-top: solid currentcolor .0625em;
+  border-top-style: solid;
   
   top:    0;
   margin: auto;
@@ -541,9 +540,10 @@
   content: '';
   left:   .0625em; /*  1px */
 /*bottom: 0;*/
-  width:  .3125em; /*  5px */
+  width:  .375em;  /*  6px */
   height: .40623em;/*  6.5px */
-  border-style: solid none solid solid;
+  border-style: solid;
+  border-right-color: transparent;
   border-radius: .125em 0 0 .125em;
 }
 .cfb.cf32::before  {
@@ -616,11 +616,12 @@
 }
 .cf35::after {
   content: '';
-  left:   .125em;  /*  2px */
+  left:   .0625em; /*  1px */
 /*bottom: 0;*/
-  width:  .3125em; /*  5px */
+  width:  .375em;  /*  6px */
   height: .40623em;/*  6.5px */
-  border-style: solid solid solid none;
+  border-style: solid;
+  border-left-color: transparent;
   border-radius: 0 .125em .125em 0;
 }
 .cfb.cf35::before  {
@@ -875,7 +876,7 @@
 
 /* 3f(63):「?」 */
 .cf3f {
-/*width:  0;*/
+  width:  .0625em; /*  1px */
   height: .125em;  /*  2px */
   margin: .75em .21875em 0;
   border-left-style: solid;
@@ -957,24 +958,39 @@
 
 
 /* 41(65):「A」 */
+.cf41 {
+  width:  .25em;   /*  4px */
+  height: .25em;   /*  4px */
+  margin: .625em .125em 0; /* 4px 3.5px 2px */
+  border-top-style: solid;
+}
 .cf41::before {
   content: '';
-/*left:   0;*/
-  bottom: .25em;   /*  4px */
-  width:  .375em;  /*  6px */
-  height: .5em;    /*  8px */
-  margin: auto;
-  border-style: solid;
-  border-radius: .1875em .1875em 0 0;
+  left:   0;
+  bottom:-.015625em;/* .25px */
+/*width:  0;*/
+  height: .78125em;   /*  12.5px */
+  border-left-style: solid;
+  transform: rotate(15deg);
 }
 .cf41::after {
   content: '';
-/*left:   0;*/
-/*bottom: 0;*/
-  width:  .375em;  /*  6px */
-  height: .375em;  /*  6px */
-  margin: auto;
-  border-style: none solid;
+  left:   .1875em; /*  3px */
+  bottom:-.015625em;/* .25px */
+/*width:  0;*/
+  height: .78125em;   /*  12.5px */
+  border-left-style: solid;
+  transform: rotate(-15deg);
+}
+.cfb.cf41 {
+  height: .3125em; /*  5px */
+  margin: .5625em .125em 0; /* 4px 3.5px 2px */
+}
+.cfb.cf41::before {
+  left:  -.03125em;/*  .5px */
+}
+.cfb.cf41::after {
+  left:   .15625em;/*  2.5px */
 }
 
 
@@ -1470,19 +1486,19 @@
 /* 56(86):「V」 */
 .cf56::before {
   content: '';
-  left:   .140625em;/* 2.25px */
-/*bottom: 0;*/
+  left:   .125em;  /*  2px */
+  bottom:-.015625em;/* .25px */
 /*width:  0;*/
-  height: .75em;   /*  12px */
+  height: .78125em;   /*  12.5px */
   border-left-style: solid;
   transform: rotate(-15deg);
 }
 .cf56::after {
   content: '';
   left:   .3125em; /*  5px */
-/*bottom: 0;*/
+  bottom:-.015625em;/* .25px */
 /*width:  0;*/
-  height: .75em;   /*  12px */
+  height: .78125em;   /*  12.5px */
   border-left-style: solid;
   transform: rotate(15deg);
 }
@@ -2160,12 +2176,12 @@
 }
 .cfb.cf73::before {
   bottom: .1875em; /*  3px */
-  width:  .3125em; /*  5px */
-  height: .3125em; /*  5px */
+  width:  .34375em;/*  5.5px */
+  height: .34375em;/*  5.5px */
 }
 .cfb.cf73::after {
-  width:  .3125em; /*  5px */
-  height: .3125em; /*  5px */
+  width:  .34375em;/*  5.5px */
+  height: .34375em;/*  5.5px */
 }
 
 
@@ -2189,6 +2205,9 @@
 }
 .cfb.cf74::before {
   width:  .21875em;/*  3.5px */
+}
+.cfb.cf74::after {
+  
 }
 
 
@@ -2457,7 +2476,6 @@
 /* CSSFont: IE11                                              */
 /*   display, position, left, bottom, width, height           */
 /*   margin, padding, border, box-sizing                      */
-/*   background, vertical-align                               */
 /*                                                            */
 /*   content: IE8                                             */
 /*   ::before, ::after: IE9                                   */
@@ -2469,21 +2487,21 @@
 /*   border-radius: IE9                                       */
 /*   https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
 /*   rotate(): IE9                                           */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
 /*   transform: IE10                                          */
+/*   https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
 /*   https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
-/*   linear-gradient(): IE10                                  */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient() */
 /*                                                            */
 /*                                                            */
 /* Not Use                                                    */
-/*   SVG                                                      */
+/*   bacckground, SVG                                         */
 /*                                                            */
 /*   outline: IE8                                             */
 /*   https://developer.mozilla.org/ja/docs/Web/CSS/outline */
 /*   box-shadow: IE9                                          */
 /*   https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+/*   linear-gradient(): IE10                                  */
 /*   conic-gradient()                                         */
+/*   https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient() */
 /*   https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient() */
 /*   clip-path: <basic-shape>;                                */
 /*   https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
