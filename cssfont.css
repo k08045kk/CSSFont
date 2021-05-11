@@ -1,14 +1,15 @@
 /**************************************************************/
 /* Index                                                      */
 /**************************************************************/
+/*   Index                                                    */
 /*   Basic                                                    */
-/*   Code 20-2f(32-47):「 !"#$%&'()*+,-./」                   */
-/*   Code 30-3f(48-63):「0123456789:;<=>?」                   */
-/*   Code 40-4f(64-79):「@ABCDEFGHIJKLMNO」                   */
-/*   Code 50-5f(80-95):「PQRSTUVWXYZ[\]^_」                   */
-/*   Code 60-6f(96-111):「`abcdefghijklmno」                  */
+/*   Code 20-2f( 32- 47):「 !"#$%&'()*+,-./」                 */
+/*   Code 30-3f( 48- 63):「0123456789:;<=>?」                 */
+/*   Code 40-4f( 64- 79):「@ABCDEFGHIJKLMNO」                 */
+/*   Code 50-5f( 80- 95):「PQRSTUVWXYZ[\]^_」                 */
+/*   Code 60-6f( 96-111):「`abcdefghijklmno」                 */
 /*   Code 70-7e(112-126):「pqrstuvwxyz{|}~」                  */
-/*   対応                                                     */
+/*   Appendix: Support                                        */
 /**************************************************************/
 
 
@@ -16,10 +17,10 @@
 /**************************************************************/
 /* Basic                                                      */
 /**************************************************************/
-.cf,                                            /* Normal */
-.cfr,                                           /* Regular */
-.cfm,                                           /* Medium */
-.cfb {                                          /* Bold */
+.cf,                                            /* Normal     */
+.cfr,                                           /* Regular    */
+.cfm,                                           /* Medium     */
+.cfb {                                          /* Bold       */
   display: inline-block;
   position: relative;
   width:  .5em;    /*  8px */
@@ -41,7 +42,7 @@
      0 -------- baseline
         -2px
   -2px -------- descenderline
-       0   8px
+       0    8px
   */
 }
 
@@ -61,6 +62,7 @@
   height: 0;
   box-sizing: border-box;
   
+/*top:    0;*/
   right:  0;
   margin: 0;
 }
@@ -103,7 +105,24 @@
 
 
 /**************************************************************/
-/* Code 20-2f(32-47):「 !"#$%&'()*+,-./」                     */
+/* Common (cf)                                                */
+/**************************************************************/
+/* 「+-/:;=\」 center alignment */
+.cf2b,                                          /* 「+」      */
+.cf2d,                                          /* 「-」      */
+.cf2f,                                          /* 「/」      */
+.cf3a,                                          /* 「:」      */
+.cf3b,                                          /* 「;」      */
+.cf3d,                                          /* 「=」      */
+.cf5c {                                         /* 「\」      */
+  height: 1em;
+  margin: 0 0 -.125em;
+}
+
+
+
+/**************************************************************/
+/* Code 20-2f( 32- 47):「 !"#$%&'()*+,-./」                   */
 /**************************************************************/
 /* 20(32):「 」 */
 .cf20 {
@@ -118,8 +137,9 @@
   bottom: .25em;   /*  4px */
 /*width:  0;*/
   height: .5em;    /*  8px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf21::after {
   content: '';
@@ -127,8 +147,9 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .125em;  /*  2px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 
 
@@ -139,9 +160,10 @@
   bottom: .625em;  /*  10px */
   width:  .0625em; /*  1px */
   height: .1875em; /*  3px */
-  margin: auto;
   border-style: none solid;
   box-sizing: content-box;
+  
+  margin: auto;
 }
 
 
@@ -369,10 +391,11 @@
   bottom: .625em;  /*  10px */
   width:  .0625em; /*  1px */
   height: .1875em; /*  3px */
-  margin: auto;
   border-style: none solid;
   border-right-color: transparent;
   box-sizing: content-box;
+  
+  margin: auto;
 }
 
 
@@ -450,10 +473,7 @@
 
 
 /* 2b(43):「+」 */
-.cf2b {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf2b::before {
   content: '';
   width:  .375em;  /*  6px */
@@ -512,10 +532,7 @@
 
 
 /* 2d(45):「-」 */
-.cf2d {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf2d::after {
   content: '';
   width:  .375em;  /*  6px */
@@ -548,10 +565,7 @@
 
 
 /* 2f(47):「/」 */
-.cf2f {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf2f::after {
   content: '';
 /*width:  0;*/
@@ -566,7 +580,7 @@
 
 
 /**************************************************************/
-/* Code 30-3f(48-63):「0123456789:;<=>?」                     */
+/* Code 30-3f( 48- 63):「0123456789:;<=>?」                   */
 /**************************************************************/
 /* 30(48):「0」 */
 .cf30::before {
@@ -575,9 +589,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: solid;
   border-radius: .125em;
+  
+  margin: auto;
 }
 .cf30::after {
   content: '';
@@ -585,9 +600,10 @@
   bottom: .0625em; /*  1px */
 /*width:  0;*/
   height: .625em;  /*  10px */
-  margin: auto;
   border-left: solid currentcolor .0625em;
   transform: rotate(30deg);
+  
+  margin: auto;
 }
 
 
@@ -654,9 +670,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: solid solid solid none;
   border-radius: 0 .125em .125em 0;
+  
+  margin: auto;
 }
 .cf33::after {
   content: '';
@@ -664,8 +681,9 @@
   bottom: .34375em;/*  5.5px */
   width:  .3125em; /*  5px */
 /*height: 0;*/
-  margin: auto;
   border-top-style: solid;
+  
+  margin: auto;
 }
 .cfm.cf33::before  {
   
@@ -688,8 +706,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-right-style: solid;
+  
+  margin: auto;
 }
 .cf34::after {
   content: '';
@@ -776,11 +795,10 @@
 /* 37(55):「7」 */
 .cf37::before {
   content: '';
-/*left:   0;*/
+  left:   .0625em; /*  1px */
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-top-style: solid;
 }
 .cf37::after {
@@ -813,9 +831,10 @@
   bottom: .34375em;/*  5.5px */
   width:  .375em;  /*  6px */
   height: .40623em;/*  6.5px */
-  margin: auto;
   border-style: solid;
   border-radius: .125em;
+  
+  margin: auto;
 }
 .cf38::after {
   content: '';
@@ -823,9 +842,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .40623em;/*  6.5px */
-  margin: auto;
   border-style: solid;
   border-radius: .125em;
+  
+  margin: auto;
 }
 .cfm.cf38::before  {
   bottom: .328125em;/* 5.25px */
@@ -879,10 +899,7 @@
 
 
 /* 3a(58):「:」 */
-.cf3a {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf3a::after {                                  /* 「:」 */
   content: '';
   width:  .125em;  /*  2px */
@@ -893,15 +910,9 @@
   top:    0;
   margin: auto;
 }
-.cfm.cf3a  {
-  
-}
 .cfm.cf3a::after  {
   width:  .15625em;/*  2.5px */
   border-width: .15625em;
-}
-.cfb.cf3a  {
-  
 }
 .cfb.cf3a::after  {
   width:  .1875em; /*  3px */
@@ -910,10 +921,7 @@
 
 
 /* 3b(59):「;」 */
-.cf3b {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf3b::before {
   content: '';
   left:   .21875em;/*  3.5px */
@@ -955,7 +963,7 @@
 .cf3c::before {
   content: '';
 /*left:   0;*/
-  bottom: .46875em;/*  7.5px */
+  bottom: .4765625em;/*7.625px */
   width:  .5em;    /*  8px */
 /*height: 0;*/
   border-top-style: solid;
@@ -964,7 +972,7 @@
 .cf3c::after {
   content: '';
 /*left:   0;*/
-  bottom: .234375em;/* 3.75px */
+  bottom: .2265625em;/* 3.625px */
   width:  .5em;    /*  8px */
 /*height: 0;*/
   border-top-style: solid;
@@ -977,18 +985,15 @@
   bottom: .21875em;/*  3.5px */
 }
 .cfb.cf3c::before {
-  bottom: .4375em; /*  7px */
+  bottom: .4296875em;/*6.875px */
 }
 .cfb.cf3c::after {
-  bottom: .203125em;/* 3.25px */
+  bottom: .2109375em;/*3.375px */
 }
 
 
 /* 3d(61):「=」 */
-.cf3d {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf3d::after {
   content: '';
   width:  .375em;  /*  6px */
@@ -1005,7 +1010,7 @@
 .cf3e::before {
   content: '';
 /*left:   0;*/
-  bottom: .46875em;/*  7.5px */
+  bottom: .4765625em;/*7.625px */
   width:  .5em;    /*  8px */
 /*height: 0;*/
   border-top-style: solid;
@@ -1014,7 +1019,7 @@
 .cf3e::after {
   content: '';
 /*left:   0;*/
-  bottom: .234375em;/* 3.75px */
+  bottom: .2265625em;/* 3.625px */
   width:  .5em;    /*  8px */
 /*height: 0;*/
   border-top-style: solid;
@@ -1027,10 +1032,10 @@
   bottom: .21875em;/*  3.5px */
 }
 .cfb.cf3e::before {
-  bottom: .4375em; /*  7px */
+  bottom: .4296875em;/*6.875px */
 }
 .cfb.cf3e::after {
-  bottom: .203125em;/* 3.25px */
+  bottom: .2109375em;/*3.375px */
 }
 
 
@@ -1083,7 +1088,7 @@
 
 
 /**************************************************************/
-/* Code 40-4f(64-79):「@ABCDEFGHIJKLMNO」                     */
+/* Code 40-4f( 64- 79):「@ABCDEFGHIJKLMNO」                   */
 /**************************************************************/
 /* 40(64):「@」 */
 .cf40 {
@@ -1172,9 +1177,10 @@
   bottom: .34375em;/*  5.5px */
   width:  .375em;  /*  6px */
   height: .40623em;/*  6.5px */
-  margin: auto;
   border-style: solid;
   border-radius: 0 50% 50% 0;
+  
+  margin: auto;
 }
 .cf42::after {
   content: '';
@@ -1182,9 +1188,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .40623em;/*  6.5px */
-  margin: auto;
   border-style: solid;
   border-radius: 0 50% 50% 0;
+  
+  margin: auto;
 }
 .cfm.cf42::before {
   bottom: .328125em;/* 5.25px */
@@ -1222,9 +1229,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: solid;
   border-radius: 0 50% 50% 0;
+  
+  margin: auto;
 }
 
 
@@ -1319,8 +1327,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: none solid;
+  
+  margin: auto;
 }
 .cf48::after {
   content: '';
@@ -1328,8 +1337,9 @@
   bottom: .34375em;/*  5.5px */
   width:  .375em;  /*  6px */
 /*height: 0;*/
-  margin: auto;
   border-top-style: solid;
+  
+  margin: auto;
 }
 .cfm.cf48::before {
   
@@ -1352,8 +1362,9 @@
 /*bottom: 0;*/
   width:  .25em;   /*  4px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: solid none;
+  
+  margin: auto;
 }
 .cf49::after {
   content: '';
@@ -1361,8 +1372,9 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 
 
@@ -1501,16 +1513,16 @@
   left:   .0078125em;/*.125px */
 }
 .cfm.cf4d::after {
-  left:   .1484375em;/*2.375px */
+  left:   .15625em;/*  2.5px */
 }
 .cfb.cf4d {
   
 }
 .cfb.cf4d::before {
-  left:  -.03125em;/*  .5px(2px) */
+  left:  -.046875em;/* .75px */
 }
 .cfb.cf4d::after {
-  left:   .09375em;/*  1.5px(4px) */
+  left:   .109375em;/* 1.75px */
 }
 
 
@@ -1521,8 +1533,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: none solid;
+  
+  margin: auto;
 }
 .cf4e::after {
   content: '';
@@ -1530,9 +1543,10 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(-20deg);
+  
+  margin: auto;
 }
 
 
@@ -1543,15 +1557,16 @@
 /*bottom: 0;*/
   width:  .4375em; /*  7px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
 
 /**************************************************************/
-/* Code 50-5f(80-95):「PQRSTUVWXYZ[\]^_」                     */
+/* Code 50-5f( 80- 95):「PQRSTUVWXYZ[\]^_」                   */
 /**************************************************************/
 /* 50(80):「P」 */
 .cf50::before {
@@ -1560,8 +1575,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf50::after {
   content: '';
@@ -1569,9 +1585,10 @@
   bottom: .3125em; /*  5px */
   width:  .375em;  /*  6px */
   height: .4375em; /*  7px */
-  margin: auto;
   border-style: solid;
   border-radius: 0 .21875em .21875em 0;
+  
+  margin: auto;
 }
 
 
@@ -1582,9 +1599,10 @@
 /*bottom: 0;*/
   width:  .4375em; /*  7px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 .cf51::after {
   content: '';
@@ -1592,10 +1610,11 @@
   bottom:-.09375em;/*  1.5px */
   width:  .25em;   /*  4px */
   height: .3125em; /*  5px */
-  margin: auto;
   border-right-style: solid;
   box-sizing: content-box;
   transform: rotate(-45deg);
+  
+  margin: auto;
 }
 
 
@@ -1651,11 +1670,12 @@
   bottom: .34375em;/*  5.5px */
   width:  .40623em;/*  6.5px */
   height: .40623em;/*  6.5px */
-  margin: auto;
   border-style: solid;
   border-right-color: transparent;
   border-radius: 50%;
   transform: rotate(45deg);
+  
+  margin: auto;
 }
 .cf53::after {
   content: '';
@@ -1663,11 +1683,12 @@
 /*bottom: 0;*/
   width:  .40623em;/*  6.5px */
   height: .40623em;/*  6.5px */
-  margin: auto;
   border-style: solid;
   border-left-color: transparent;
   border-radius: 50%;
   transform: rotate(45deg);
+  
+  margin: auto;
 }
 .cfm.cf53::before {
   bottom: .328125em;/* 5.25px */
@@ -1696,8 +1717,9 @@
 /*bottom: 0;*/
   width:  .4375em; /*  7px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-top-style: solid;
+  
+  margin: auto;
 }
 .cf54::after {
   content: '';
@@ -1705,20 +1727,23 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 
 
 /* 55(85):「U」 */
 .cf55::after {
   content: '';
-  left:   .0625em; /*  1px */
+/*left:   0;*/
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
   border-style: none solid solid;
   border-radius: 0 0 .1875em .1875em;
+  
+  margin: auto;
 }
 
 
@@ -1819,9 +1844,10 @@
   bottom:-.015625em;/* .25px */
 /*width:  0;*/
   height: .78125em;   /*  12.5px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(-25deg);
+  
+  margin: auto;
 }
 .cf58::after {
   content: '';
@@ -1829,9 +1855,10 @@
   bottom:-.015625em;/* .25px */
 /*width:  0;*/
   height: .78125em;   /*  12.5px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(25deg);
+  
+  margin: auto;
 }
 
 
@@ -1883,11 +1910,13 @@
 /* 5a(90):「Z」 */
 .cf5a::before {
   content: '';
-  left:   .0625em; /*  1px */
+/*left:   0;*/
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
   border-style: solid none;
+  
+  margin: auto;
 }
 .cf5a::after {
   content: '';
@@ -1895,9 +1924,10 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(25deg);
+  
+  margin: auto;
 }
 
 
@@ -1913,15 +1943,11 @@
 
 
 /* 5c(92):「\」 */
-.cf5c {                                         /* 「+」 */
-  height: 1em;
-  margin: 0 0 -.125em;
-}
+                                                /* 「+-/:;=\」*/
 .cf5c::after {
   content: '';
 /*width:  0;*/
   height: .875em;  /*  14px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(-25deg);
   
@@ -1987,7 +2013,7 @@
 
 
 /**************************************************************/
-/* Code 60-6f(96-111):「`abcdefghijklmno」                    */
+/* Code 60-6f( 96-111):「`abcdefghijklmno」                   */
 /**************************************************************/
 /* 60(96):「`」 */
 .cf60::after {
@@ -1996,9 +2022,10 @@
   bottom: .625em;  /*  10px */
 /*width:  0;*/
   height: .1875em; /*  3px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(-45deg);
+  
+  margin: auto;
 }
 
 
@@ -2009,10 +2036,11 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid solid none;
   border-left-color: transparent;
   border-radius: .25em .25em 0 0;
+  
+  margin: auto;
 }
 .cf61::after {
   content: '';
@@ -2020,9 +2048,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .3125em; /*  5px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
@@ -2033,8 +2062,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf62::after {                          /* 「o」 */
   content: '';
@@ -2042,9 +2072,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
@@ -2068,8 +2099,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-right-style: solid;
+  
+  margin: auto;
 }
 .cf64::after {                         /* 「o」 */
   content: '';
@@ -2077,9 +2109,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
@@ -2096,11 +2129,10 @@
 }
 .cf65::after {
   content: '';
-/*left:   0;*/
+  left:   .0625em; /*  1px */
   bottom: .1875em; /*  3px */
   width:  .375em;  /*  6px */
   height: .3125em; /*  5px */
-  margin: auto;
   border-style: solid;
   border-radius: 50% 50% 0 0;
 }
@@ -2109,11 +2141,10 @@
 /* 66(102):「f」 */
 .cf66::before {
   content: '';
-/*left:   0;*/
+  left:   .0625em; /*  1px */
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-top-style: solid;
 }
 .cf66::after {
@@ -2170,8 +2201,9 @@
 /*bottom: 0;*/
   width:  .3125em; /*  5px */
   height: .75em;   /*  12px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf68::after {                          /* 「n」 */
   content: '';
@@ -2179,9 +2211,10 @@
 /*bottom: 0;*/
   width:  .3125em; /*  5px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid solid none;
-  border-radius: .1875em .1875em 0 0;
+  border-radius: .15625em .15625em 0 0;
+  
+  margin: auto;
 }
 
 
@@ -2193,8 +2226,9 @@
   bottom: .625em;  /*  10px */
 /*width:  0;*/
   height: .125em;  /*  2px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf69::after {
   content: '';
@@ -2202,8 +2236,9 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .5em;    /*  8px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 
 
@@ -2322,7 +2357,7 @@
   width:  .25em;   /*  4px */
   height: .5em;    /*  8px */
   border-style: solid solid none;
-  border-radius: .1875em .1875em 0 0;
+  border-radius: .125em .125em 0 0;
 }
 .cf6d::after {
   content: '';
@@ -2331,7 +2366,7 @@
   width:  .25em;   /*  4px */
   height: .5em;    /*  8px */
   border-style: solid solid none;
-  border-radius: .1875em .1875em 0 0;
+  border-radius: .125em .125em 0 0;
 }
 .cfm.cf6d {
   
@@ -2366,8 +2401,9 @@
 /*bottom: 0;*/
   width:  .3125em; /*  5px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf6e::after {                          /* 「n」 */
   content: '';
@@ -2375,9 +2411,10 @@
 /*bottom: 0;*/
   width:  .3125em; /*  5px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid solid none;
-  border-radius: .1875em .1875em 0 0;
+  border-radius: .15625em .15625em 0 0;
+  
+  margin: auto;
 }
 
 
@@ -2388,9 +2425,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
@@ -2405,8 +2443,9 @@
   bottom:-.125em;  /*  2px */
   width:  .375em;  /*  6px */
   height: .625em;  /*  10px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 .cf70::after {                         /* 「o」 */
   content: '';
@@ -2414,9 +2453,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
@@ -2427,8 +2467,9 @@
   bottom:-.125em;  /*  2px */
   width:  .375em;  /*  6px */
   height: .625em;  /*  10px */
-  margin: auto;
   border-right-style: solid;
+  
+  margin: auto;
 }
 .cf71::after {                         /* 「o」 */
   content: '';
@@ -2436,9 +2477,10 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid;
   border-radius: 50%;
+  
+  margin: auto;
 }
 
 
@@ -2473,11 +2515,12 @@
   bottom: .21875em;/*  3.5px */
   width:  .3125em; /*  5px */
   height: .3125em; /*  5px */
-  margin: auto;
   border-style: solid;
   border-right-color: transparent;
   border-radius: 50%;
   transform: rotate(45deg);
+  
+  margin: auto;
 }
 .cf73::after {
   content: '';
@@ -2487,11 +2530,12 @@
   height: .28125em;/*  4.5px */
   width:  .3125em; /*  5px */
   height: .3125em; /*  5px */
-  margin: auto;
   border-style: solid;
   border-left-color: transparent;
   border-radius: 50%;
   transform: rotate(45deg);
+  
+  margin: auto;
 }
 .cfm.cf73::before {
   bottom: .203125em;/* 3.25px */
@@ -2535,13 +2579,13 @@
   width:  .203125em;/* 3.25px */
 }
 .cfm.cf74::after {
-  
+  width:  .328125em;/* 5.25px */
 }
 .cfb.cf74::before {
   width:  .21875em;/*  3.5px */
 }
 .cfb.cf74::after {
-  
+  width:  .34375em;/*  5.5px */
 }
 
 
@@ -2552,9 +2596,10 @@
 /*bottom: 0;*/
   width:  .3125em; /*  5px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: none solid solid solid;
-  border-radius: 0 0 .1875em .1875em;
+  border-radius: 0 0 .15625em .15625em;
+  
+  margin: auto;
 }
 .cf75::after {
   content: '';
@@ -2562,8 +2607,9 @@
 /*bottom: 0;*/
   width:  .3125em; /*  5px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-right-style: solid;
+  
+  margin: auto;
 }
 
 
@@ -2658,9 +2704,10 @@
   bottom:-.015625em;/* .25px */
 /*width:  0;*/
   height: .53125em;/*  8.5px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(-30deg);
+  
+  margin: auto;
 }
 .cf78::after {
   content: '';
@@ -2668,9 +2715,10 @@
   bottom:-.015625em;/* .25px */
 /*width:  0;*/
   height: .53125em;/*  8.5px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(30deg);
+  
+  margin: auto;
 }
 
 
@@ -2714,8 +2762,9 @@
 /*bottom: 0;*/
   width:  .375em;  /*  6px */
   height: .5em;    /*  8px */
-  margin: auto;
   border-style: solid none;
+  
+  margin: auto;
 }
 .cf7a::after {
   content: '';
@@ -2723,9 +2772,10 @@
 /*bottom: 0;*/
 /*width:  0;*/
   height: .5em;    /*  8px */
-  margin: auto;
   border-left-style: solid;
   transform: rotate(35deg);
+  
+  margin: auto;
 }
 
 
@@ -2769,8 +2819,9 @@
   bottom:-.125em;  /*  2px */
 /*width:  0;*/
   height: 1em;     /*  16px */
-  margin: auto;
   border-left-style: solid;
+  
+  margin: auto;
 }
 
 
@@ -2845,7 +2896,13 @@
 
 
 /**************************************************************/
-/* 対応                                                       */
+/* Common (::before, ::after)                                 */
+/**************************************************************/
+
+
+
+/**************************************************************/
+/* Appendix: Support                                          */
 /**************************************************************/
 /* CSSFont: IE11                                              */
 /*   display, position, left, bottom, width, height           */
@@ -2853,32 +2910,34 @@
 /*                                                            */
 /*   content: IE8                                             */
 /*   ::before, ::after: IE9                                   */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/content */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/::after */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/content */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/::after */
 /*   currentcolor, transparent: IE9                           */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/color_value */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/color_value */
 /*   border-radius: IE9                                       */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
-/*   rotate(): IE9                                           */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
 /*   transform: IE10                                          */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+/*   rotate(): IE9                                            */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
 /*                                                            */
 /*                                                            */
 /* Not Use                                                    */
 /*   SVG                                                      */
 /*                                                            */
 /*   outline: IE8                                             */
-/*   https://developer.mozilla.org/ja/docs/Web/CSS/outline */
+/*     https://developer.mozilla.org/ja/docs/Web/CSS/outline */
 /*   box-shadow: IE9                                          */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 /*   linear-gradient(): IE10                                  */
 /*   conic-gradient()                                         */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient() */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient() */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient() */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient() */
 /*   clip-path: <basic-shape>;                                */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+/*   calc(): IE9                                              */
+/*     https://developer.mozilla.org/ja/docs/Web/CSS/calc() */
 /*   var(), --*                                               */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/var() */
-/*   https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/var() */
+/*     https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
