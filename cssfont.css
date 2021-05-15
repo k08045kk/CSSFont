@@ -19,6 +19,11 @@
 /**************************************************************/
 /* Basic                                                      */
 /**************************************************************/
+:root {
+  --cf-letter-spacing: calc(.0625em * 0);
+}
+
+
 .cf,                                            /* CSSFont    */
 .cfr,                                           /* Regular    */
 .cfm,                                           /* Medium     */
@@ -29,10 +34,11 @@
   width:  .375em;   /*  6px */
   height: .5em;     /*  8px */
   margin: .375em .0625em 0; /* 6px 1px 0 */
+  margin-right: calc(.0625em + var(--cf-letter-spacing));
   padding:0;
   border: solid currentcolor .0625em; /* 1px */
   box-sizing: border-box;
-  transform-origin: .1875em .125em; /* 1+3px 2+8-2px */
+  transform-origin: 50% .125em; /* 1+3px 2+8-2px */
   /* Note: Displays Tofu as standard. */
   
 /*line-height: 1;*/
@@ -41,7 +47,7 @@
   
 /*letter-spacing: 0;*/
   /* Note: The `letter-spacing` is assumed to be 0. */
-  /*       In CSSFont, there is no way to set the value of `letter-spacing`. */
+  /*       You can use `--cf-letter-spacing` to achieve `letter-spacing`. */
   
 /*vertical-align: baseline;*/
   /* Note: The `vertical-align` is assumed to be `baseline`. */
@@ -160,11 +166,10 @@
   width:  .5em;     /*  8px */
   height: .875em;   /*  14px */
   margin: 0;
+  margin-right: calc(var(--cf-letter-spacing));
   border-style: none;
-  transform-origin: .25em .5em; /* 4px 8px */
+  transform-origin: 50% .5em; /* 4px 8px */
 }
-
-
 
 
 /* 「center」 ----------------------------------------------- */
@@ -179,9 +184,28 @@
   width:  .5em;     /*  8px */
   height: 1em;
   margin: 0 0 -.125em;
+  margin-right: calc(var(--cf-letter-spacing));
   border-style: none;
-  transform-origin: 50% 50%;
+  transform-origin: 50% .5em;
 }
+
+
+/* 「other」 ------------------------------------------------ */
+                                                /* 「$」 */
+                                                /* 「%」 */
+                                                /* 「&」 */
+                                                /* 「*」 */
+                                                /* 「?」 */
+                                                /* 「@」 */
+                                                /* 「A」 */
+                                                /* 「K」 */
+                                                /* 「M」 */
+                                                /* 「R」 */
+                                                /* 「W」 */
+                                                /* 「Y」 */
+                                                /* 「k」 */
+                                                /* 「m」 */
+                                                /* 「w」 */
 
 
 
@@ -274,7 +298,8 @@
 .cf24 {
   width:  .0625em;  /*  1px */
   height: .875em;   /*  14px */
-  margin: .0625em .21875em -.0625em;
+  margin: .0625em .21875em -.0625em; /* 1px 3.5px -1px */
+  margin-right: calc(.21875em + var(--cf-letter-spacing));
   border-left: solid currentcolor .0625em;
   transform-origin: 50% 50%;
 }
@@ -337,6 +362,7 @@
   width:  .25em;    /*  4px */
   height: .25em;    /*  4px */
   margin: .625em .0625em 0 .1875em; /*  10px 1px 0 3px */
+  margin-right: calc(.0625em + var(--cf-letter-spacing));
   border-style: solid;
   border-radius: 50%;
   transform-origin: .0625em -.125em; /* 3+1px 6+2px */
@@ -391,6 +417,7 @@
   width:  .25em;    /*  4px */
   height: .5625em;  /*  9px */
   margin: .125em .1875em .1875em .0625em;
+  margin-right: calc(.1875em + var(--cf-letter-spacing));
   border-style: solid none solid solid;
   border-radius: .0625em 0 0 .0625em;
   transform-origin: .1875em .375em; /* 1+3px 14-6px */
@@ -414,6 +441,7 @@
 }
 .cfm.cf26 {
   margin: .125em .1953125em .1875em .0546875em;
+  margin-right: calc(.1953125em + var(--cf-letter-spacing));
   transform-origin: .1953125em .375em; /* .875+3.125px 14-6px */
 }
 .cfm.cf26::before {
@@ -427,6 +455,7 @@
 }
 .cfb.cf26 {
   margin: .125em .203125em .1875em .046875em;
+  margin-right: calc(.203125em + var(--cf-letter-spacing));
   transform-origin: .203125em .375em; /* .75+3.25px 14-6px */
 }
 .cfb.cf26::before {
@@ -485,6 +514,7 @@
   width:  .0625em;  /*  1px */
   height: .5em;     /*  8px */
   margin: .25em .21875em .125em;
+  margin-right: calc(.21875em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: 50% 50%;
 }
@@ -509,6 +539,7 @@
 .cfm.cf2a {
   width:  .09375em; /*  1.5px */
   margin: .25em .203125em .125em;
+  margin-right: calc(.203125em + var(--cf-letter-spacing));
 }
 .cfm.cf2a::before {
   left:  -.09375em; /* -1.5px(3.25px) */
@@ -519,6 +550,7 @@
 .cfb.cf2a {
   width:  .125em;   /*  2px */
   margin: .25em .1875em .125em;
+  margin-right: calc(.1875em + var(--cf-letter-spacing));
 }
 .cfb.cf2a::before {
   left:  -.125em;   /* -2px(3.25px) */
@@ -1002,6 +1034,7 @@
   width:  .0625em;  /*  1px */
   height: .125em;   /*  2px */
   margin: .75em .21875em 0;
+  margin-right: calc(.21875em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: 50% -.25em; /* 50% 2+2+4px */
 }
@@ -1026,6 +1059,7 @@
 }
 .cfm.cf3f {
   margin: .75em .203125em 0;
+  margin-right: calc(.203125em + var(--cf-letter-spacing));
 }
 .cfm.cf3f::before {
   left:  -.234375em;/* -3.75px(1px) */
@@ -1036,6 +1070,7 @@
 }
 .cfb.cf3f {
   margin: .75em .1875em 0;
+  margin-right: calc(.1875em + var(--cf-letter-spacing));
 }
 .cfb.cf3f::before {
   left:  -.25em;    /* -4px(1px) */
@@ -1057,6 +1092,7 @@
   width:  .4375em;  /*  7px */
   height: .75em;    /*  12px */
   margin: .125em .03125em 0;
+  margin-right: calc(.03125em + var(--cf-letter-spacing));
   border: solid currentcolor .0625em;
   border-right-color: transparent;
   border-radius: .25em;
@@ -1090,6 +1126,7 @@
   width:  .25em;    /*  4px */
   height: .28125em; /*  4.5px */
   margin: .59375em .125em 0; /* 9.5px 2px 0 */
+  margin-right: calc(.125em + var(--cf-letter-spacing));
   border-top-style: solid;
   transform-origin: .125em -.09375em; /* 2+2px 2+4.5+1.5px */
 }
@@ -1115,6 +1152,7 @@
   width:  .28125em; /*  4.5px */
   height: .296875em;/*  4.75px */
   margin: .578125em .109375em 0; /* 9.25px 1.75px 0 */
+  margin-right: calc(.109375em + var(--cf-letter-spacing));
   transform-origin: .140625em -.078125em; /* 1.75+2.25px 2+4.75+1.25px */
 }
 .cfm.cf41::before {
@@ -1127,6 +1165,7 @@
   width:  .3125em;  /*  5px */
   height: .3125em;  /*  5px */
   margin: .5625em .09375em 0; /* 9px 1.5px 0 */
+  margin-right: calc(.09375em + var(--cf-letter-spacing));
   transform-origin: .15625em -.0625em; /* 1.5+2.5px 2+5+1px */
 }
 .cfb.cf41::before {
@@ -1272,6 +1311,7 @@
   width:  .375em;   /*  6px */
   height: .75em;    /*  12px */
   margin: .125em .0625em 0;
+  margin-right: calc(.0625em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: .1875em .375em; /* 1+3px 2+12-6px */
 }
@@ -1332,6 +1372,7 @@
   width:  .4375em;  /*  7px */
   height: .75em;    /*  12px */
   margin: .125em .03125em 0;
+  margin-right: calc(.03125em + var(--cf-letter-spacing));
   border-style: none solid;
   transform-origin: .21875em .375em; /* .5+3.5px 2+12-6px */
 }
@@ -1449,6 +1490,7 @@
   width:  .375em;   /*  6px */
   height: .75em;    /*  12px */
   margin: .125em .0625em 0;
+  margin-right: calc(.0625em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: .1875em .375em; /* 1+3px 2+12-6px */
 }
@@ -1597,6 +1639,7 @@
   width:  .4375em;  /*  7px */
   height: .75em;    /*  12px */
   margin: .125em .03125em 0;
+  margin-right: calc(.03125em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: .21875em .375em; /* .5+3.5px 2+12-6px */
 }
@@ -1680,6 +1723,7 @@
   width:  .0625em;  /*  1px */
   height: .375em;   /*  6px */
   margin: .5em .21875em 0;
+  margin-right: calc(.21875em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: 50% 0; /* 50% 2+6+0px */
 }
@@ -1703,6 +1747,7 @@
 }
 .cfm.cf59 {
   margin: .5em .203125em 0;
+  margin-right: calc(.203125em + var(--cf-letter-spacing));
 }
 .cfm.cf59::before {
   left:  -.1875em;  /*  3px */
@@ -1712,6 +1757,7 @@
 }
 .cfb.cf59 {
   margin: .5em .1875em 0;
+  margin-right: calc(.1875em + var(--cf-letter-spacing));
 }
 .cfb.cf59::before {
   left:  -.21875em; /* -3.5px */
@@ -2053,6 +2099,7 @@
   width:  .375em;   /*  6px */
   height: .75em;    /*  12px */
   margin: .125em .0625em 0;
+  margin-right: calc(.0625em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: .1875em .375em; /* 1+3px 2+12-6px */
 }
@@ -2119,6 +2166,7 @@
   width:  .4375em;  /*  7px */
   height: .5em;     /*  8px */
   margin: .375em .03125em 0;
+  margin-right: calc(.03125em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: .21875em .125em; /* .5+3.5px 2+8-2px */
 }
@@ -2368,6 +2416,7 @@
   width:  .4375em;  /*  7px */
   height: .5em;     /*  8px */
   margin: .375em .03125em 0;
+  margin-right: calc(.03125em + var(--cf-letter-spacing));
   border-left-style: solid;
   transform-origin: .21875em .125em; /* .5+3.5px 2+8-2px */
 }
@@ -2878,6 +2927,14 @@
 /*     https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew() */
 /*                                                            */
 /*                                                            */
+/* Extensions                                                 */
+/*   letter-spacing                                           */
+/*     calc(), var(), --*                                     */
+/*       https://developer.mozilla.org/ja/docs/Web/CSS/calc() */
+/*       https://developer.mozilla.org/en-US/docs/Web/CSS/var() */
+/*       https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+/*                                                            */
+/*                                                            */
 /* Unused                                                     */
 /*   SVG, dataURL, url()                                      */
 /*                                                            */
@@ -2891,10 +2948,5 @@
 /*     https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient() */
 /*   clip-path: <basic-shape>;                                */
 /*     https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
-/*   calc(): IE9                                              */
-/*     https://developer.mozilla.org/ja/docs/Web/CSS/calc() */
-/*   var(), --*                                               */
-/*     https://developer.mozilla.org/en-US/docs/Web/CSS/var() */
-/*     https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
 /*   filter                                                   */
 /*     https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
