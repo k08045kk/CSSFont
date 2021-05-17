@@ -3,6 +3,7 @@
 /**************************************************************/
 /*   Index                                                    */
 /*   Basic                                                    */
+/*   Code                                                     */
 /*   Code 20-2f( 32- 47):「 !"#$%&'()*+,-./」                 */
 /*   Code 30-3f( 48- 63):「0123456789:;<=>?」                 */
 /*   Code 40-4f( 64- 79):「@ABCDEFGHIJKLMNO」                 */
@@ -10,6 +11,7 @@
 /*   Code 60-6f( 96-111):「`abcdefghijklmno」                 */
 /*   Code 70-7e(112-126):「pqrstuvwxyz{|}~」                  */
 /*   Common (::before, ::after)                               */
+/*   Proportional                                             */
 /*   Appendix: Support                                        */
 /**************************************************************/
 
@@ -24,6 +26,8 @@
 
 
 .cf,                                            /* CSSFont    */
+.cfp,                                           /* Proportional */
+.cfo,                                           /* Oblique (Italic) */
 .cfr,                                           /* Regular    */
 .cfm,                                           /* Medium     */
 .cfb {                                          /* Bold       */
@@ -73,14 +77,12 @@
 /*      0    8px                                              */
 
 
-.cf::before,
-.cf::after,
-.cfr::before,
-.cfr::after,
-.cfm::before,
-.cfm::after,
-.cfb::before,
-.cfb::after {
+.cf::before, .cf::after,
+.cfp::before, .cfp::after,
+.cfo::before, .cfo::after,
+.cfr::before, .cfr::after,
+.cfm::before, .cfm::after,
+.cfb::before, .cfb::after {
   position: absolute;
   left:   0;
   bottom: 0;
@@ -104,43 +106,47 @@
 }
 
 
-.cfm,
-.cfm::before,
-.cfm::after {
+.cfm, .cfm::before, .cfm::after {
   border-width: .09375em; /* 1.5px */
 }
-.cfb,
-.cfb::before,
-.cfb::after {
+.cfb, .cfb::before, .cfb::after {
   border-width:  .125em; /* 2px */
 }
 
 
 /* transform ------------------------------------------------ */
+.cfo {
+  transform: skew(-20.625deg);
+}
+
 .cf-flip-horizontal {
   transform: scale(-1, 1);
 }
+.cfo.cf-flip-horizontal {
+  transform: skew(-20.625deg) scale(-1, 1);
+}
+
 .cf-flip-vertical {
   transform: scale(1, -1);
 }
+.cfo.cf-flip-vertical {
+  transform: skew(-20.625deg) scale(1, -1);
+}
+
 .cf-flip-both,
 .cf-flip-horizontal.cf-flip-vertical {
   transform: scale(-1, -1);
 }
-
-.cf-oblique {
-  transform: skew(-20.625deg);
-}
-.cf-oblique.cf-flip-horizontal {
-  transform: skew(-20.625deg) scale(-1, 1);
-}
-.cf-oblique.cf-flip-vertical {
-  transform: skew(-20.625deg) scale(1, -1);
-}
-.cf-oblique.cf-flip-both,
-.cf-oblique.cf-flip-horizontal.cf-flip-vertical {
+.cfo.cf-flip-both,
+.cfo.cf-flip-horizontal.cf-flip-vertical {
   transform: skew(-20.625deg) scale(-1, -1);
 }
+
+
+
+/**************************************************************/
+/* Code                                                       */
+/**************************************************************/
 
 
 /* 「tofu」 ------------------------------------------------- */
@@ -220,7 +226,7 @@
 }
 
 
-/* 21(33):「!」 */
+/* 21(33):「!」 --------------------------------------------- */
 .cf21::before {
   content: '';
 /*left:   0;*/
@@ -617,19 +623,19 @@
 /* 31(49):「1」 --------------------------------------------- */
 .cf31::after {
   content: '';
-  left:   .109375em;/*  1.75px */
+/*left:   0;*/
 /*bottom: 0;*/
   width:  .1875em;  /*  3px */
   height: .75em;    /*  12px */
   border-style: solid solid none none;
   border-radius: 0 .125em;
+  
+  margin: auto;
 }
 .cfm.cf31::after  {
-  left:   .09375em; /*  1.5px */
   width:  .21875em; /*  3.5px */
 }
 .cfb.cf31::after  {
-  left:   .0625em;  /*  1px */
   width:  .25em;    /*  4px */
 }
 
@@ -1909,11 +1915,13 @@
 /* 66(102):「f」 -------------------------------------------- */
 .cf66::before {
   content: '';
-  left:   .09375em; /*  1.5px */
+/*left:   0;*/
 /*bottom: 0;*/
   width:  .3125em;  /*  5px */
   height: .5em;     /*  8px */
   border-top-style: solid;
+  
+  margin: auto;
 }
 .cf66::after {
   content: '';
@@ -2263,16 +2271,16 @@
   content: '';
   left:   .1875em;  /*  3px */
 /*bottom: 0;*/
-  width:  .25em;    /*  4px */
+  width:  .21875em; /*  3.5px */
   height: .625em;   /*  10px */
   border-style: none none solid solid;
   border-radius: 0 .125em;
 }
 .cf74::after {
   content: '';
-  left:   .0625em;  /*  1px */
+  left:   .09375em; /*  1.5px */
 /*bottom: 0;*/
-  width:  .375em;   /*  6px */
+  width:  .3125em;  /*  5px */
   height: .5em;     /*  8px */
   border-top-style: solid;
 }
@@ -2876,6 +2884,122 @@
                                                 /* 「m」 */
                                                 /* 「w」 */
 /* Note: The bold expression compromises the line width. */
+
+
+
+/**************************************************************/
+/* Proportional                                               */
+/**************************************************************/
+
+
+/* 4px ------------------------------------------------------ */
+.cfp.cf20,                                      /* 「 」 */
+.cfp.cf21,                                      /* 「!」 */
+.cfp.cf27,                                      /* 「'」 */
+.cfp.cf69,                                      /* 「i」 */
+.cfp.cf6a,                                      /* 「j」 */
+.cfp.cf7c {                                     /* 「|」 */
+  margin-left:  -.125em;
+  margin-right: -.125em;
+  margin-right: calc(-.125em + var(--cf-letter-spacing));
+}
+
+
+/* 5px ------------------------------------------------------ */
+.cfp.cf2c,                                      /* 「,」 */
+.cfp.cf2e,                                      /* 「.」 */
+.cfp.cf3a,                                      /* 「:」 */
+.cfp.cf3b,                                      /* 「;」 */
+.cfp.cf60 {                                     /* 「`」 */
+  margin-left:  -.09375em;
+  margin-right: -.09375em;
+  margin-right: calc(-.09375em + var(--cf-letter-spacing));
+}
+
+
+/* 6px ------------------------------------------------------ */
+.cfp.cf28,                                      /* 「(」 */
+.cfp.cf29,                                      /* 「)」 */
+.cfp.cf49,                                      /* 「I」 */
+.cfp.cf66,                                      /* 「f」 */
+.cfp.cf74 {                                     /* 「t」 */
+  margin-left:  -.0625em;
+  margin-right: -.0625em;
+  margin-right: calc(-.0625em + var(--cf-letter-spacing));
+}
+
+
+/* 7px ------------------------------------------------------ */
+.cfp.cf22,                                      /* 「"」 */
+.cfp.cf73 {                                     /* 「s」 */
+  margin-left:  -.03125em;
+  margin-right: -.03125em;
+  margin-right: calc(-.03125em + var(--cf-letter-spacing));
+}
+
+
+/* 7.5px ---------------------------------------------------- */
+.cfp.cf68,                                      /* 「h」 */
+.cfp.cf6e,                                      /* 「n」 */
+.cfp.cf72,                                      /* 「r」 */
+.cfp.cf75 {                                     /* 「u」 */
+  margin-left:  -.015625em;
+  margin-right: -.015625em;
+  margin-right: calc(-.015625em + var(--cf-letter-spacing));
+}
+
+
+/* 8px ------------------------------------------------------ */
+/* 「#$%&*+-/0123456789<=>?[\]^_{}~」 */
+/* 「ABCDEFGHLNPRTUVXYZ」 */
+/* 「abcdegopqvxyz」 */
+/* 「tofu」 */
+
+
+/* 8.5px ---------------------------------------------------- */
+.cfp.cf53 {                                     /* 「S」 */
+  margin-left:   .015625em;
+  margin-right:  .015625em;
+  margin-right: calc(.015625em + var(--cf-letter-spacing));
+}
+
+
+/* 9px ------------------------------------------------------ */
+.cfp.cf4f,                                      /* 「O」 */
+.cfp.cf51 {                                     /* 「Q」 */
+  margin-left:   .03125em;
+  margin-right:  .03125em;
+  margin-right: calc(.03125em + var(--cf-letter-spacing));
+}
+
+
+/* other ---------------------------------------------------- */
+.cfp.cf40,                                      /* 「@」 */
+.cfp.cf4d,                                      /* 「M」 */
+.cfp.cf57,                                      /* 「W」 */
+.cfp.cf6d,                                      /* 「m」 */
+.cfp.cf77 {                                     /* 「w」 */
+  margin-left:   .0625em;
+  margin-right:  .0625em;
+  margin-right: calc(.0625em + var(--cf-letter-spacing));
+}
+
+.cfp.cf4a {                                     /* 「J」 */
+  margin-right: -.0625em;
+  margin-right: calc(-.0625em + var(--cf-letter-spacing));
+}
+
+.cfp.cf4b,                                      /* 「K」 */
+.cfp.cf6b {                                     /* 「k」 */
+  margin-right: 0;
+  margin-right: calc(var(--cf-letter-spacing));
+}
+
+.cfp.cf6c {                                     /* 「l」 */
+  margin-left:  -.125em;
+  margin-right: -.0625em;
+  margin-right: calc(-.0625em + var(--cf-letter-spacing));
+}
 
 
 
