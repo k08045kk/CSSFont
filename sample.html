@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>CSSFont Sample</title>
+  <meta content="This is a sample page of CSS Font." name="description"/>
+
+  <link rel="stylesheet" href="../cssfont.css"/>
+  <style>
+#app {
+  max-width: 40em;
+}
+#app-form {
+  width: 40em;
+  margin: 1em 0;
+  padding: 1em 0 0;
+  border: 1px solid #aaa;
+  background: #F8F8F0;
+}
+#app-input {
+  width: calc(100% - 32px);
+  margin: 0 16px 16px;
+  padding: .25em .5em;
+  box-sizing: border-box;
+}
+
+fieldset {
+  margin: 0 16px 16px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  text-align: left;
+}
+fieldset > table {
+  width: 100%;
+}
+.app-options-label {
+  min-width: 16em;
+  padding: .25em;
+  text-align: right;
+}
+.app-options-input {
+  min-width: 16em;
+  padding: .25em;
+}
+input[type=number] {
+  text-align: right;
+}
+
+#app-out {
+  display: flex;
+}
+#app-output,
+#app-outtext {
+  width: 50%;
+  min-height: calc(16px * 14);
+  margin: 0 0 16px;
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  font-family: monospace, monospace;
+  line-height: 1;
+  white-space: pre;
+  unicode-bidi: bidi-override;
+}
+
+  </style>
+  <style>
+.cfc {
+  display: inline-block;
+  width: .5em;
+  height: 1em;
+  border: solid 1px #000;
+  background:
+    linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%),
+    linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%);
+  background-position: 0 0, .125em .125em;
+  background-size: .25em .25em;
+  
+  line-height: 1;
+}
+
+.cft {
+  margin: .25em;
+  line-height: 1;
+}
+
+.cf:hover,
+.cfr:hover,
+.cfm:hover,
+.cfb:hover { color: red; }
+.mark { color: red; }
+.font16 { font-size: 16px; }
+.font24 { font-size: 24px; }
+.font32 { font-size: 32px; }
+.font48 { font-size: 48px; }
+.font64 { font-size: 64px; }
+
+#block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 44em;
+}
+
+.sample {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+/*text-align: center;*/
+}
+
+#block-appendix {
+  margin: .5em 0 1em;
+  font-size: 48px;
+  text-align: center;
+  font-family: Arial, monospace;
+}
+.cfc > .cf {
+  outline: solid red .0625em;
+}
+
+.links {
+  text-align: center;
+}
+  </style>
+  <noscript><style>
+#app-button {
+  display: none;
+}
+
+  </style></noscript>
+
+
+
+<body id="block">
+<div id="block-title">
+  <p class="cft font48" aria-label="CSSFont"
+    ><i class="cfp cf2a mark"></i
+    ><i class="cfp cf2a mark"></i
+    ><i class="cfp cfb cf20"></i
+    ><i class="cfp cfb cf43"></i
+    ><i class="cfp cfb cf53"></i
+    ><i class="cfp cfb cf53"></i
+    ><i class="cfp cfb cf46"></i
+    ><i class="cfp cfb cf6f"></i
+    ><i class="cfp cfb cf6e"></i
+    ><i class="cfp cfb cf74"></i
+    ><i class="cfp cfb cf20"></i
+    ><i class="cfp cf2a mark"></i
+    ><i class="cfp cf2a mark"></i
+  ></p><!-- ** CSSFont ** -->
+</div>
+
+
+
+<div id="app">
+  <form id="app-form">
+    <textarea id="app-input" rows="8">/* 43(67):「C」 */
+.cf43::after {
+  content: '';
+  left:   .046875em;/* .75px */
+/*bottom: 0;*/
+  width:  .5em;    /*  8px */
+  height: .75em;   /*  12px */
+  border-style: solid;
+  border-right-color: transparent;
+  border-radius: 50%;
+}</textarea>
+    <fieldset>
+      <table>
+        <tr>
+          <td class="app-options-label" aria-label="color"
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf72"></i
+          ></td>
+          <td class="app-options-input"><input id="app-color" type="color" value="#000000"/></td>
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="background-color"
+            ><i class="cfp cf62"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf6b"></i
+            ><i class="cfp cf67"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf75"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf64"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf72"></i
+          ></td>
+          <td class="app-options-input"><input id="app-background" type="color" value="#f0f0f0"/>&emsp;<label><input id="app-checkbox-reverse" type="checkbox"
+            >&thinsp;<i class="cfp cf72"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf76"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf73"></i
+            ><i class="cfp cf65"></i
+          ></label></td><!-- reverse -->
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="font-family"
+            ><i class="cfp cf66"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf66"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf6d"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf79"></i
+          ></td>
+          <td class="app-options-input"><label><input id="app-checkbox-font-family" type="checkbox"
+            >&thinsp;<i class="cf cf70"></i
+            ><i class="cfp cfm cf72"></i
+            ><i class="cfp cfm cf6f"></i
+            ><i class="cfp cfm cf70"></i
+            ><i class="cfp cfm cf6f"></i
+            ><i class="cfp cfm cf72"></i
+            ><i class="cfp cfm cf74"></i
+            ><i class="cfp cfm cf69"></i
+            ><i class="cfp cfm cf6f"></i
+            ><i class="cfp cfm cf6e"></i
+            ><i class="cfp cfm cf61"></i
+            ><i class="cfp cfm cf6c"></i
+          ></label></td><!-- proportional -->
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="font-width"
+            ><i class="cfp cf66"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf77"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf64"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf68"></i
+          ></td>
+          <td class="app-options-input">
+            <select id="app-font-width">
+              <option value="cfr">regular</option>
+              <option value="cfm">medium</option>
+              <option value="cfb">bold</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="font-size"
+            ><i class="cfp cf66"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf73"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf7a"></i
+            ><i class="cfp cf65"></i
+          ></td>
+          <td class="app-options-input"><input id="app-font-size" type="number" value="16" min="10" max="64" step="1"
+            >&thinsp;<i class="cf cf70"></i
+            ><i class="cfp cfm cf78"></i
+          ></label></td>
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="line-height"
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf68"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf67"></i
+            ><i class="cfp cf68"></i
+            ><i class="cfp cf74"></i
+          ></td>
+          <td class="app-options-input"><input id="app-line-height" type="number" value="1" min="0" max="2" step="0.1"/></label></td>
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="letter-spacing"
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf73"></i
+            ><i class="cfp cf70"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf67"></i
+          ></td>
+          <td class="app-options-input"><input id="app-letter-spacing" type="number" value="0" min="0" max="2" step="0.1"/></label></td>
+        </tr>
+        <tr>
+          <td class="app-options-label" rowspan="3" aria-label="transform"
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf73"></i
+            ><i class="cfp cf66"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf6d"></i
+          ></td>
+          <td class="app-options-input"><label><input id="app-checkbox-oblique" type="checkbox"
+            >&thinsp;<i class="cfp cf6f"></i
+            ><i class="cfp cf62"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf71"></i
+            ><i class="cfp cf75"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf20"></i
+            ><i class="cfp cf28"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf29"></i
+          ></label></td><!-- oblique (italic) -->
+        </tr>
+        <tr>
+          <!--td class="app-options-label">transform</td-->
+          <td class="app-options-input"><label><input id="app-checkbox-flip-horizontal" type="checkbox"
+            >&thinsp;<i class="cfp cf66"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf70"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf68"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf7a"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf6c"></i
+          ></label></td><!-- flip-horizontal -->
+        </tr>
+        <tr>
+          <!--td class="app-options-label">transform</td-->
+          <td class="app-options-input"><label><input id="app-checkbox-flip-vertical" type="checkbox"
+            >&thinsp;<i class="cfp cf66"></i
+            ><i class="cfp cf6c"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf70"></i
+            ><i class="cfp cf2d"></i
+            ><i class="cfp cf76"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf6c"></i
+          ></label></td><!-- flip-vertical -->
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="direction"
+            ><i class="cfp cf64"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf70"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf63"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6e"></i
+          ></td>
+          <td class="app-options-input">
+            <select id="app-direction">
+              <option value="ltr">ltr</option>
+              <option value="rtl">rtl</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="app-options-label" aria-label="save"
+            ><i class="cfp cf73"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf76"></i
+            ><i class="cfp cf65"></i
+          ></td>
+          <td class="app-options-input"><label><input id="app-checkbox-save" type="checkbox"
+            >&thinsp;<i class="cfp cf73"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf76"></i
+            ><i class="cfp cf65"></i
+            ><i class="cfp cf20"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf74"></i
+          ></label></td>
+        </tr>
+      </table>
+    </fieldset>
+    <!--button id="app-button" type="button">Convert</button-->
+    <noscript>Please enable JavaScript.</noscript>
+  </form>
+  <div id="app-out">
+    <div id="app-output"></div>
+    <div id="app-outtext"></div>
+  </div>
+  <script>
+//<![CDATA[
+(function() {
+  // サイト設定読込み
+  const getLocalStorage = function() {
+    let options = null;
+    const input = localStorage.getItem('CSSFontInput');
+    if (input) {
+      document.getElementById('app-input').value = input;
+    }
+    try {
+      options = JSON.parse(localStorage.getItem('CSSFontOptions'));
+    } catch (e) {}
+    if (options) {
+      for (let key in options) {
+        const element = document.getElementById(key);
+        if (options.hasOwnProperty(key) && element) {
+          if (key.substring(0, 13) === 'app-checkbox-') {
+            element.checked = options[key];
+            element.dispatchEvent(new Event('change'));
+          } else {
+            element.value = options[key];
+            element.dispatchEvent(new Event('change'));
+          }
+        }
+      }
+      document.getElementById('app-checkbox-save').checked = true;
+    }
+  };
+  // サイト設定書込み
+  const setLocalStorage = function(text) {
+    const input = document.getElementById('app-input');
+    const options = {
+      'app-color': document.getElementById('app-color').value, 
+      'app-background': document.getElementById('app-background').value, 
+      'app-checkbox-reverse': document.getElementById('app-checkbox-reverse').checked, 
+      'app-checkbox-font-family': document.getElementById('app-checkbox-font-family').checked, 
+      'app-font-width': document.getElementById('app-font-width').value, 
+      'app-font-size': document.getElementById('app-font-size').value, 
+      'app-line-height': document.getElementById('app-line-height').value, 
+      'app-letter-spacing': document.getElementById('app-letter-spacing').value, 
+      'app-checkbox-oblique': document.getElementById('app-checkbox-oblique').checked, 
+      'app-checkbox-flip-horizontal': document.getElementById('app-checkbox-flip-horizontal').checked, 
+      'app-checkbox-flip-vertical': document.getElementById('app-checkbox-flip-vertical').checked, 
+      'app-direction': document.getElementById('app-direction').value, 
+    };
+    localStorage.setItem('CSSFontInput', input.value.length < 50000 ? input.value : '');
+    localStorage.setItem('CSSFontOptions', JSON.stringify(options));
+  };
+  const update = function() {
+    convert();
+    if (document.getElementById('app-checkbox-save').checked) {
+      setLocalStorage();
+    }
+  };
+  
+  // 変換
+  let old = '';
+  function convert() {
+    const input = document.getElementById('app-input');
+    const output = document.getElementById('app-output');
+    const family = document.getElementById('app-checkbox-font-family').checked ? 'cfp ' : '';
+    const width = document.getElementById('app-font-width').value;
+    const style = document.getElementById('app-checkbox-oblique').checked ? 'oblique ' : '';
+    const flipH = document.getElementById('app-checkbox-flip-horizontal').checked ? 'cf-flip-horizontal ' : '';
+    const flipV = document.getElementById('app-checkbox-flip-vertical').checked ? 'cf-flip-vertical ' : '';
+    let text = input.value.replace(/\r?\n/g, '\n');
+    if (text == old) {
+      return;
+    }
+    
+    let html = '';
+    for (let i=0; i<text.length; i++) {
+      if (text.charAt(i) == '\n') {
+        html += '<br>';
+      } else {
+        html += '<i class="cf '+width+' '+family+style+flipH+flipV+'cf'+(text.charCodeAt(i) < 0x10 ? '0' : '')+text.charCodeAt(i).toString(16).toLocaleLowerCase()+'"></i>';
+      }
+    }
+    
+    output.innerHTML = html;
+    document.getElementById('app-outtext').innerText = text;
+    old = text;
+  };
+  
+  function colorReverse(color) {
+    console.log(color);
+    var bits = /^#?(\w{2})(\w{2})(\w{2})$/.exec(color);
+    var r = parseInt(bits[1], 16);
+    var g = parseInt(bits[2], 16);
+    var b = parseInt(bits[3], 16);
+    console.log(r, g, b);
+    r = 255 - r;
+    g = 255 - g;
+    b = 255 - b;
+    console.log(r, g, b);
+    var color = '#';
+    color += (r < 16 ? '0' : '') + r.toString(16);
+    color += (g < 16 ? '0' : '') + g.toString(16);
+    color += (b < 16 ? '0' : '') + b.toString(16);
+    console.log(color);
+    return color;
+  };
+  
+  //document.getElementById('app-button').addEventListener('click', convert);
+  document.getElementById('app-input').addEventListener('blur', update);
+  document.getElementById('app-color').addEventListener('change', function(event) {
+    const color = event.target.value;
+    document.getElementById('app-output').style.color = color;
+    document.getElementById('app-outtext').style.color = color;
+    if (document.getElementById('app-checkbox-reverse').checked) {
+      const reverse = colorReverse(color);
+      document.getElementById('app-output').style.backgroundColor = reverse;
+      document.getElementById('app-outtext').style.backgroundColor = reverse;
+    }
+    update();
+  });
+  document.getElementById('app-background').addEventListener('change', function(event) {
+    const bgcolor = event.target.value;
+    document.getElementById('app-output').style.backgroundColor = bgcolor;
+    document.getElementById('app-outtext').style.backgroundColor = bgcolor;
+    update();
+  });
+  document.getElementById('app-checkbox-reverse').addEventListener('change', function(event) {
+    const bgcolor = event.target.checked 
+                  ? colorReverse(document.getElementById('app-color').value) 
+                  : document.getElementById('app-background').value;
+    document.getElementById('app-output').style.backgroundColor = bgcolor;
+    document.getElementById('app-outtext').style.backgroundColor = bgcolor;
+    document.getElementById('app-background').disabled = event.target.checked;
+    update();
+  });
+  document.getElementById('app-checkbox-font-family').addEventListener('change', function(event) {
+    const func = event.target.checked 
+               ? (element) => { element.classList.add('cfp'); } 
+               : (element) => { element.classList.remove('cfp'); } 
+    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+    document.getElementById('app-outtext').style.fontFamily 
+        = event.target.checked ? 'sans-serif' : 'monospace, monospace';
+    update();
+  });
+  document.getElementById('app-font-width').addEventListener('change', function(event) {
+    const width = event.target.value;
+    const cfset = {'cfr':['cfm','cfb','400'], 'cfm':['cfr','cfb','500'], 'cfb':['cfr','cfm','700']};
+    [...document.querySelectorAll('#app-output > .cf')].forEach((element) => {
+      element.classList.replace(cfset[width][0], width);
+      element.classList.replace(cfset[width][1], width);
+    });
+    document.getElementById('app-outtext').style.fontWeight = cfset[width][2];
+    update();
+  });
+  document.getElementById('app-font-size').addEventListener('change', function(event) {
+    const size = event.target.value;
+    document.getElementById('app-output').style.fontSize = size+'px';
+    document.getElementById('app-outtext').style.fontSize = size+'px';
+    update();
+  });
+  document.getElementById('app-line-height').addEventListener('change', function(event) {
+    const height = event.target.value;
+    document.getElementById('app-output').style.lineHeight = height;
+    document.getElementById('app-outtext').style.lineHeight = height;
+    update();
+  });
+  document.getElementById('app-letter-spacing').addEventListener('change', function(event) {
+    const space = event.target.value;
+    document.getElementById('app-output').style.setProperty('--cf-letter-spacing', (0.0625*space)+'em');
+    document.getElementById('app-outtext').style.letterSpacing = (0.0625 * space)+'em';
+    update();
+  });
+  document.getElementById('app-checkbox-oblique').addEventListener('change', function(event) {
+    const func = event.target.checked 
+               ? (element) => { element.classList.add('cfo'); } 
+               : (element) => { element.classList.remove('cfo'); } 
+    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+    document.getElementById('app-outtext').style.fontStyle 
+        = document.getElementById('app-checkbox-oblique').checked ? 'oblique' : 'normal';
+    update();
+  });
+  document.getElementById('app-checkbox-flip-horizontal').addEventListener('change', function(event) {
+    const func = event.target.checked 
+               ? (e) => { e.classList.add('cf-flip-horizontal'); } 
+               : (e) => { e.classList.remove('cf-flip-horizontal'); } 
+    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+    update();
+  });
+  document.getElementById('app-checkbox-flip-vertical').addEventListener('change', function(event) {
+    const func = event.target.checked 
+               ? (e) => { e.classList.add('cf-flip-vertical'); } 
+               : (e) => { e.classList.remove('cf-flip-vertical'); } 
+    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+    update();
+  });
+  document.getElementById('app-direction').addEventListener('change', function(event) {
+    const direction = event.target.value;
+    document.getElementById('app-output').style.direction = direction;
+    document.getElementById('app-outtext').style.direction = direction;
+    update();
+  });
+  document.getElementById('app-checkbox-save').addEventListener('change', function(event) {
+    if (event.target.checked) {
+      update();
+    } else {
+      localStorage.removeItem('CSSFontInput');
+      localStorage.removeItem('CSSFontOptions');
+    }
+  });
+  getLocalStorage();
+  convert();
+})();
+//]]>
+  </script>
+</div><!-- #app -->
+
+
+
+<p class="cft font48" aria-label="Sample"
+  ><i class="cfp cf2a mark"></i
+  ><i class="cfp cf2a mark"></i
+  ><i class="cfp cfm cf20"></i
+  ><i class="cfp cfm cf53"></i
+  ><i class="cfp cfm cf61"></i
+  ><i class="cfp cfm cf6d"></i
+  ><i class="cfp cfm cf70"></i
+  ><i class="cfp cfm cf6c"></i
+  ><i class="cfp cfm cf65"></i
+  ><i class="cfp cfm cf20"></i
+  ><i class="cfp cf2a mark"></i
+  ><i class="cfp cf2a mark"></i
+></p><!-- ** Sample ** -->
+
+
+
+<div class="sample">
+<div>
+  <p class="cft font32" aria-label="Regular"
+    ><i class="cfp cfr cf52"></i
+    ><i class="cfp cfr cf65"></i
+    ><i class="cfp cfr cf67"></i
+    ><i class="cfp cfr cf75"></i
+    ><i class="cfp cfr cf6c"></i
+    ><i class="cfp cfr cf61"></i
+    ><i class="cfp cfr cf72"></i
+  ></p><!-- Regular -->
+<p class="cft font16"
+  ><i class="cfr cf20"></i
+  ><i class="cfr cf21"></i
+  ><i class="cfr cf22"></i
+  ><i class="cfr cf23"></i
+  ><i class="cfr cf24"></i
+  ><i class="cfr cf25"></i
+  ><i class="cfr cf26"></i
+  ><i class="cfr cf27"></i
+  ><i class="cfr cf28"></i
+  ><i class="cfr cf29"></i
+  ><i class="cfr cf2a"></i
+  ><i class="cfr cf2b"></i
+  ><i class="cfr cf2c"></i
+  ><i class="cfr cf2d"></i
+  ><i class="cfr cf2e"></i
+  ><i class="cfr cf2f"></i><br
+  ><i class="cfr cf30"></i
+  ><i class="cfr cf31"></i
+  ><i class="cfr cf32"></i
+  ><i class="cfr cf33"></i
+  ><i class="cfr cf34"></i
+  ><i class="cfr cf35"></i
+  ><i class="cfr cf36"></i
+  ><i class="cfr cf37"></i
+  ><i class="cfr cf38"></i
+  ><i class="cfr cf39"></i
+  ><i class="cfr cf3a"></i
+  ><i class="cfr cf3b"></i
+  ><i class="cfr cf3c"></i
+  ><i class="cfr cf3d"></i
+  ><i class="cfr cf3e"></i
+  ><i class="cfr cf3f"></i><br
+  ><i class="cfr cf40"></i
+  ><i class="cfr cf41"></i
+  ><i class="cfr cf42"></i
+  ><i class="cfr cf43"></i
+  ><i class="cfr cf44"></i
+  ><i class="cfr cf45"></i
+  ><i class="cfr cf46"></i
+  ><i class="cfr cf47"></i
+  ><i class="cfr cf48"></i
+  ><i class="cfr cf49"></i
+  ><i class="cfr cf4a"></i
+  ><i class="cfr cf4b"></i
+  ><i class="cfr cf4c"></i
+  ><i class="cfr cf4d"></i
+  ><i class="cfr cf4e"></i
+  ><i class="cfr cf4f"></i><br
+  ><i class="cfr cf50"></i
+  ><i class="cfr cf51"></i
+  ><i class="cfr cf52"></i
+  ><i class="cfr cf53"></i
+  ><i class="cfr cf54"></i
+  ><i class="cfr cf55"></i
+  ><i class="cfr cf56"></i
+  ><i class="cfr cf57"></i
+  ><i class="cfr cf58"></i
+  ><i class="cfr cf59"></i
+  ><i class="cfr cf5a"></i
+  ><i class="cfr cf5b"></i
+  ><i class="cfr cf5c"></i
+  ><i class="cfr cf5d"></i
+  ><i class="cfr cf5e"></i
+  ><i class="cfr cf5f"></i><br
+  ><i class="cfr cf60"></i
+  ><i class="cfr cf61"></i
+  ><i class="cfr cf62"></i
+  ><i class="cfr cf63"></i
+  ><i class="cfr cf64"></i
+  ><i class="cfr cf65"></i
+  ><i class="cfr cf66"></i
+  ><i class="cfr cf67"></i
+  ><i class="cfr cf68"></i
+  ><i class="cfr cf69"></i
+  ><i class="cfr cf6a"></i
+  ><i class="cfr cf6b"></i
+  ><i class="cfr cf6c"></i
+  ><i class="cfr cf6d"></i
+  ><i class="cfr cf6e"></i
+  ><i class="cfr cf6f"></i><br
+  ><i class="cfr cf70"></i
+  ><i class="cfr cf71"></i
+  ><i class="cfr cf72"></i
+  ><i class="cfr cf73"></i
+  ><i class="cfr cf74"></i
+  ><i class="cfr cf75"></i
+  ><i class="cfr cf76"></i
+  ><i class="cfr cf77"></i
+  ><i class="cfr cf78"></i
+  ><i class="cfr cf79"></i
+  ><i class="cfr cf7a"></i
+  ><i class="cfr cf7b"></i
+  ><i class="cfr cf7c"></i
+  ><i class="cfr cf7d"></i
+  ><i class="cfr cf7e"></i
+  ><i class="cfr cf7f"></i><br
+  >
+</p>
+</div>
+<p class="cft font64"
+  ><i class="cfr cf20"></i
+  ><i class="cfr cf21"></i
+  ><i class="cfr cf22"></i
+  ><i class="cfr cf23"></i
+  ><i class="cfr cf24"></i
+  ><i class="cfr cf25"></i
+  ><i class="cfr cf26"></i
+  ><i class="cfr cf27"></i
+  ><i class="cfr cf28"></i
+  ><i class="cfr cf29"></i
+  ><i class="cfr cf2a"></i
+  ><i class="cfr cf2b"></i
+  ><i class="cfr cf2c"></i
+  ><i class="cfr cf2d"></i
+  ><i class="cfr cf2e"></i
+  ><i class="cfr cf2f"></i><br
+  ><i class="cfr cf30"></i
+  ><i class="cfr cf31"></i
+  ><i class="cfr cf32"></i
+  ><i class="cfr cf33"></i
+  ><i class="cfr cf34"></i
+  ><i class="cfr cf35"></i
+  ><i class="cfr cf36"></i
+  ><i class="cfr cf37"></i
+  ><i class="cfr cf38"></i
+  ><i class="cfr cf39"></i
+  ><i class="cfr cf3a"></i
+  ><i class="cfr cf3b"></i
+  ><i class="cfr cf3c"></i
+  ><i class="cfr cf3d"></i
+  ><i class="cfr cf3e"></i
+  ><i class="cfr cf3f"></i><br
+  ><i class="cfr cf40"></i
+  ><i class="cfr cf41"></i
+  ><i class="cfr cf42"></i
+  ><i class="cfr cf43"></i
+  ><i class="cfr cf44"></i
+  ><i class="cfr cf45"></i
+  ><i class="cfr cf46"></i
+  ><i class="cfr cf47"></i
+  ><i class="cfr cf48"></i
+  ><i class="cfr cf49"></i
+  ><i class="cfr cf4a"></i
+  ><i class="cfr cf4b"></i
+  ><i class="cfr cf4c"></i
+  ><i class="cfr cf4d"></i
+  ><i class="cfr cf4e"></i
+  ><i class="cfr cf4f"></i><br
+  ><i class="cfr cf50"></i
+  ><i class="cfr cf51"></i
+  ><i class="cfr cf52"></i
+  ><i class="cfr cf53"></i
+  ><i class="cfr cf54"></i
+  ><i class="cfr cf55"></i
+  ><i class="cfr cf56"></i
+  ><i class="cfr cf57"></i
+  ><i class="cfr cf58"></i
+  ><i class="cfr cf59"></i
+  ><i class="cfr cf5a"></i
+  ><i class="cfr cf5b"></i
+  ><i class="cfr cf5c"></i
+  ><i class="cfr cf5d"></i
+  ><i class="cfr cf5e"></i
+  ><i class="cfr cf5f"></i><br
+  ><i class="cfr cf60"></i
+  ><i class="cfr cf61"></i
+  ><i class="cfr cf62"></i
+  ><i class="cfr cf63"></i
+  ><i class="cfr cf64"></i
+  ><i class="cfr cf65"></i
+  ><i class="cfr cf66"></i
+  ><i class="cfr cf67"></i
+  ><i class="cfr cf68"></i
+  ><i class="cfr cf69"></i
+  ><i class="cfr cf6a"></i
+  ><i class="cfr cf6b"></i
+  ><i class="cfr cf6c"></i
+  ><i class="cfr cf6d"></i
+  ><i class="cfr cf6e"></i
+  ><i class="cfr cf6f"></i><br
+  ><i class="cfr cf70"></i
+  ><i class="cfr cf71"></i
+  ><i class="cfr cf72"></i
+  ><i class="cfr cf73"></i
+  ><i class="cfr cf74"></i
+  ><i class="cfr cf75"></i
+  ><i class="cfr cf76"></i
+  ><i class="cfr cf77"></i
+  ><i class="cfr cf78"></i
+  ><i class="cfr cf79"></i
+  ><i class="cfr cf7a"></i
+  ><i class="cfr cf7b"></i
+  ><i class="cfr cf7c"></i
+  ><i class="cfr cf7d"></i
+  ><i class="cfr cf7e"></i
+  ><i class="cfr cf7f"></i><br
+  >
+</p>
+</div><!-- block-regular -->
+
+
+
+<div class="sample">
+<div>
+  <p class="cft font32" aria-label="Medium"
+    ><i class="cfp cfm cf4d"></i
+    ><i class="cfp cfm cf65"></i
+    ><i class="cfp cfm cf64"></i
+    ><i class="cfp cfm cf69"></i
+    ><i class="cfp cfm cf75"></i
+    ><i class="cfp cfm cf6d"></i
+  ></p><!-- Medium -->
+<p class="cft font16"
+  ><i class="cfm cf20"></i
+  ><i class="cfm cf21"></i
+  ><i class="cfm cf22"></i
+  ><i class="cfm cf23"></i
+  ><i class="cfm cf24"></i
+  ><i class="cfm cf25"></i
+  ><i class="cfm cf26"></i
+  ><i class="cfm cf27"></i
+  ><i class="cfm cf28"></i
+  ><i class="cfm cf29"></i
+  ><i class="cfm cf2a"></i
+  ><i class="cfm cf2b"></i
+  ><i class="cfm cf2c"></i
+  ><i class="cfm cf2d"></i
+  ><i class="cfm cf2e"></i
+  ><i class="cfm cf2f"></i><br
+  ><i class="cfm cf30"></i
+  ><i class="cfm cf31"></i
+  ><i class="cfm cf32"></i
+  ><i class="cfm cf33"></i
+  ><i class="cfm cf34"></i
+  ><i class="cfm cf35"></i
+  ><i class="cfm cf36"></i
+  ><i class="cfm cf37"></i
+  ><i class="cfm cf38"></i
+  ><i class="cfm cf39"></i
+  ><i class="cfm cf3a"></i
+  ><i class="cfm cf3b"></i
+  ><i class="cfm cf3c"></i
+  ><i class="cfm cf3d"></i
+  ><i class="cfm cf3e"></i
+  ><i class="cfm cf3f"></i><br
+  ><i class="cfm cf40"></i
+  ><i class="cfm cf41"></i
+  ><i class="cfm cf42"></i
+  ><i class="cfm cf43"></i
+  ><i class="cfm cf44"></i
+  ><i class="cfm cf45"></i
+  ><i class="cfm cf46"></i
+  ><i class="cfm cf47"></i
+  ><i class="cfm cf48"></i
+  ><i class="cfm cf49"></i
+  ><i class="cfm cf4a"></i
+  ><i class="cfm cf4b"></i
+  ><i class="cfm cf4c"></i
+  ><i class="cfm cf4d"></i
+  ><i class="cfm cf4e"></i
+  ><i class="cfm cf4f"></i><br
+  ><i class="cfm cf50"></i
+  ><i class="cfm cf51"></i
+  ><i class="cfm cf52"></i
+  ><i class="cfm cf53"></i
+  ><i class="cfm cf54"></i
+  ><i class="cfm cf55"></i
+  ><i class="cfm cf56"></i
+  ><i class="cfm cf57"></i
+  ><i class="cfm cf58"></i
+  ><i class="cfm cf59"></i
+  ><i class="cfm cf5a"></i
+  ><i class="cfm cf5b"></i
+  ><i class="cfm cf5c"></i
+  ><i class="cfm cf5d"></i
+  ><i class="cfm cf5e"></i
+  ><i class="cfm cf5f"></i><br
+  ><i class="cfm cf60"></i
+  ><i class="cfm cf61"></i
+  ><i class="cfm cf62"></i
+  ><i class="cfm cf63"></i
+  ><i class="cfm cf64"></i
+  ><i class="cfm cf65"></i
+  ><i class="cfm cf66"></i
+  ><i class="cfm cf67"></i
+  ><i class="cfm cf68"></i
+  ><i class="cfm cf69"></i
+  ><i class="cfm cf6a"></i
+  ><i class="cfm cf6b"></i
+  ><i class="cfm cf6c"></i
+  ><i class="cfm cf6d"></i
+  ><i class="cfm cf6e"></i
+  ><i class="cfm cf6f"></i><br
+  ><i class="cfm cf70"></i
+  ><i class="cfm cf71"></i
+  ><i class="cfm cf72"></i
+  ><i class="cfm cf73"></i
+  ><i class="cfm cf74"></i
+  ><i class="cfm cf75"></i
+  ><i class="cfm cf76"></i
+  ><i class="cfm cf77"></i
+  ><i class="cfm cf78"></i
+  ><i class="cfm cf79"></i
+  ><i class="cfm cf7a"></i
+  ><i class="cfm cf7b"></i
+  ><i class="cfm cf7c"></i
+  ><i class="cfm cf7d"></i
+  ><i class="cfm cf7e"></i
+  ><i class="cfm cf7f"></i><br
+  >
+</p>
+</div>
+<p class="cft font64"
+  ><i class="cfm cf20"></i
+  ><i class="cfm cf21"></i
+  ><i class="cfm cf22"></i
+  ><i class="cfm cf23"></i
+  ><i class="cfm cf24"></i
+  ><i class="cfm cf25"></i
+  ><i class="cfm cf26"></i
+  ><i class="cfm cf27"></i
+  ><i class="cfm cf28"></i
+  ><i class="cfm cf29"></i
+  ><i class="cfm cf2a"></i
+  ><i class="cfm cf2b"></i
+  ><i class="cfm cf2c"></i
+  ><i class="cfm cf2d"></i
+  ><i class="cfm cf2e"></i
+  ><i class="cfm cf2f"></i><br
+  ><i class="cfm cf30"></i
+  ><i class="cfm cf31"></i
+  ><i class="cfm cf32"></i
+  ><i class="cfm cf33"></i
+  ><i class="cfm cf34"></i
+  ><i class="cfm cf35"></i
+  ><i class="cfm cf36"></i
+  ><i class="cfm cf37"></i
+  ><i class="cfm cf38"></i
+  ><i class="cfm cf39"></i
+  ><i class="cfm cf3a"></i
+  ><i class="cfm cf3b"></i
+  ><i class="cfm cf3c"></i
+  ><i class="cfm cf3d"></i
+  ><i class="cfm cf3e"></i
+  ><i class="cfm cf3f"></i><br
+  ><i class="cfm cf40"></i
+  ><i class="cfm cf41"></i
+  ><i class="cfm cf42"></i
+  ><i class="cfm cf43"></i
+  ><i class="cfm cf44"></i
+  ><i class="cfm cf45"></i
+  ><i class="cfm cf46"></i
+  ><i class="cfm cf47"></i
+  ><i class="cfm cf48"></i
+  ><i class="cfm cf49"></i
+  ><i class="cfm cf4a"></i
+  ><i class="cfm cf4b"></i
+  ><i class="cfm cf4c"></i
+  ><i class="cfm cf4d"></i
+  ><i class="cfm cf4e"></i
+  ><i class="cfm cf4f"></i><br
+  ><i class="cfm cf50"></i
+  ><i class="cfm cf51"></i
+  ><i class="cfm cf52"></i
+  ><i class="cfm cf53"></i
+  ><i class="cfm cf54"></i
+  ><i class="cfm cf55"></i
+  ><i class="cfm cf56"></i
+  ><i class="cfm cf57"></i
+  ><i class="cfm cf58"></i
+  ><i class="cfm cf59"></i
+  ><i class="cfm cf5a"></i
+  ><i class="cfm cf5b"></i
+  ><i class="cfm cf5c"></i
+  ><i class="cfm cf5d"></i
+  ><i class="cfm cf5e"></i
+  ><i class="cfm cf5f"></i><br
+  ><i class="cfm cf60"></i
+  ><i class="cfm cf61"></i
+  ><i class="cfm cf62"></i
+  ><i class="cfm cf63"></i
+  ><i class="cfm cf64"></i
+  ><i class="cfm cf65"></i
+  ><i class="cfm cf66"></i
+  ><i class="cfm cf67"></i
+  ><i class="cfm cf68"></i
+  ><i class="cfm cf69"></i
+  ><i class="cfm cf6a"></i
+  ><i class="cfm cf6b"></i
+  ><i class="cfm cf6c"></i
+  ><i class="cfm cf6d"></i
+  ><i class="cfm cf6e"></i
+  ><i class="cfm cf6f"></i><br
+  ><i class="cfm cf70"></i
+  ><i class="cfm cf71"></i
+  ><i class="cfm cf72"></i
+  ><i class="cfm cf73"></i
+  ><i class="cfm cf74"></i
+  ><i class="cfm cf75"></i
+  ><i class="cfm cf76"></i
+  ><i class="cfm cf77"></i
+  ><i class="cfm cf78"></i
+  ><i class="cfm cf79"></i
+  ><i class="cfm cf7a"></i
+  ><i class="cfm cf7b"></i
+  ><i class="cfm cf7c"></i
+  ><i class="cfm cf7d"></i
+  ><i class="cfm cf7e"></i
+  ><i class="cfm cf7f"></i><br
+  >
+</p>
+</div><!-- block-medium -->
+
+
+
+<div class="sample">
+<div>
+  <p class="cft font32" aria-label="Bold"
+    ><i class="cfp cfb cf42"></i
+    ><i class="cfp cfb cf6f"></i
+    ><i class="cfp cfb cf6c"></i
+    ><i class="cfp cfb cf64"></i
+  ></p><!-- Bold -->
+<p class="cft font16"
+  ><i class="cfb cf20"></i
+  ><i class="cfb cf21"></i
+  ><i class="cfb cf22"></i
+  ><i class="cfb cf23"></i
+  ><i class="cfb cf24"></i
+  ><i class="cfb cf25"></i
+  ><i class="cfb cf26"></i
+  ><i class="cfb cf27"></i
+  ><i class="cfb cf28"></i
+  ><i class="cfb cf29"></i
+  ><i class="cfb cf2a"></i
+  ><i class="cfb cf2b"></i
+  ><i class="cfb cf2c"></i
+  ><i class="cfb cf2d"></i
+  ><i class="cfb cf2e"></i
+  ><i class="cfb cf2f"></i><br
+  ><i class="cfb cf30"></i
+  ><i class="cfb cf31"></i
+  ><i class="cfb cf32"></i
+  ><i class="cfb cf33"></i
+  ><i class="cfb cf34"></i
+  ><i class="cfb cf35"></i
+  ><i class="cfb cf36"></i
+  ><i class="cfb cf37"></i
+  ><i class="cfb cf38"></i
+  ><i class="cfb cf39"></i
+  ><i class="cfb cf3a"></i
+  ><i class="cfb cf3b"></i
+  ><i class="cfb cf3c"></i
+  ><i class="cfb cf3d"></i
+  ><i class="cfb cf3e"></i
+  ><i class="cfb cf3f"></i><br
+  ><i class="cfb cf40"></i
+  ><i class="cfb cf41"></i
+  ><i class="cfb cf42"></i
+  ><i class="cfb cf43"></i
+  ><i class="cfb cf44"></i
+  ><i class="cfb cf45"></i
+  ><i class="cfb cf46"></i
+  ><i class="cfb cf47"></i
+  ><i class="cfb cf48"></i
+  ><i class="cfb cf49"></i
+  ><i class="cfb cf4a"></i
+  ><i class="cfb cf4b"></i
+  ><i class="cfb cf4c"></i
+  ><i class="cfb cf4d"></i
+  ><i class="cfb cf4e"></i
+  ><i class="cfb cf4f"></i><br
+  ><i class="cfb cf50"></i
+  ><i class="cfb cf51"></i
+  ><i class="cfb cf52"></i
+  ><i class="cfb cf53"></i
+  ><i class="cfb cf54"></i
+  ><i class="cfb cf55"></i
+  ><i class="cfb cf56"></i
+  ><i class="cfb cf57"></i
+  ><i class="cfb cf58"></i
+  ><i class="cfb cf59"></i
+  ><i class="cfb cf5a"></i
+  ><i class="cfb cf5b"></i
+  ><i class="cfb cf5c"></i
+  ><i class="cfb cf5d"></i
+  ><i class="cfb cf5e"></i
+  ><i class="cfb cf5f"></i><br
+  ><i class="cfb cf60"></i
+  ><i class="cfb cf61"></i
+  ><i class="cfb cf62"></i
+  ><i class="cfb cf63"></i
+  ><i class="cfb cf64"></i
+  ><i class="cfb cf65"></i
+  ><i class="cfb cf66"></i
+  ><i class="cfb cf67"></i
+  ><i class="cfb cf68"></i
+  ><i class="cfb cf69"></i
+  ><i class="cfb cf6a"></i
+  ><i class="cfb cf6b"></i
+  ><i class="cfb cf6c"></i
+  ><i class="cfb cf6d"></i
+  ><i class="cfb cf6e"></i
+  ><i class="cfb cf6f"></i><br
+  ><i class="cfb cf70"></i
+  ><i class="cfb cf71"></i
+  ><i class="cfb cf72"></i
+  ><i class="cfb cf73"></i
+  ><i class="cfb cf74"></i
+  ><i class="cfb cf75"></i
+  ><i class="cfb cf76"></i
+  ><i class="cfb cf77"></i
+  ><i class="cfb cf78"></i
+  ><i class="cfb cf79"></i
+  ><i class="cfb cf7a"></i
+  ><i class="cfb cf7b"></i
+  ><i class="cfb cf7c"></i
+  ><i class="cfb cf7d"></i
+  ><i class="cfb cf7e"></i
+  ><i class="cfb cf7f"></i><br
+  >
+</p>
+</div>
+<p class="cft font64"
+  ><i class="cfb cf20"></i
+  ><i class="cfb cf21"></i
+  ><i class="cfb cf22"></i
+  ><i class="cfb cf23"></i
+  ><i class="cfb cf24"></i
+  ><i class="cfb cf25"></i
+  ><i class="cfb cf26"></i
+  ><i class="cfb cf27"></i
+  ><i class="cfb cf28"></i
+  ><i class="cfb cf29"></i
+  ><i class="cfb cf2a"></i
+  ><i class="cfb cf2b"></i
+  ><i class="cfb cf2c"></i
+  ><i class="cfb cf2d"></i
+  ><i class="cfb cf2e"></i
+  ><i class="cfb cf2f"></i><br
+  ><i class="cfb cf30"></i
+  ><i class="cfb cf31"></i
+  ><i class="cfb cf32"></i
+  ><i class="cfb cf33"></i
+  ><i class="cfb cf34"></i
+  ><i class="cfb cf35"></i
+  ><i class="cfb cf36"></i
+  ><i class="cfb cf37"></i
+  ><i class="cfb cf38"></i
+  ><i class="cfb cf39"></i
+  ><i class="cfb cf3a"></i
+  ><i class="cfb cf3b"></i
+  ><i class="cfb cf3c"></i
+  ><i class="cfb cf3d"></i
+  ><i class="cfb cf3e"></i
+  ><i class="cfb cf3f"></i><br
+  ><i class="cfb cf40"></i
+  ><i class="cfb cf41"></i
+  ><i class="cfb cf42"></i
+  ><i class="cfb cf43"></i
+  ><i class="cfb cf44"></i
+  ><i class="cfb cf45"></i
+  ><i class="cfb cf46"></i
+  ><i class="cfb cf47"></i
+  ><i class="cfb cf48"></i
+  ><i class="cfb cf49"></i
+  ><i class="cfb cf4a"></i
+  ><i class="cfb cf4b"></i
+  ><i class="cfb cf4c"></i
+  ><i class="cfb cf4d"></i
+  ><i class="cfb cf4e"></i
+  ><i class="cfb cf4f"></i><br
+  ><i class="cfb cf50"></i
+  ><i class="cfb cf51"></i
+  ><i class="cfb cf52"></i
+  ><i class="cfb cf53"></i
+  ><i class="cfb cf54"></i
+  ><i class="cfb cf55"></i
+  ><i class="cfb cf56"></i
+  ><i class="cfb cf57"></i
+  ><i class="cfb cf58"></i
+  ><i class="cfb cf59"></i
+  ><i class="cfb cf5a"></i
+  ><i class="cfb cf5b"></i
+  ><i class="cfb cf5c"></i
+  ><i class="cfb cf5d"></i
+  ><i class="cfb cf5e"></i
+  ><i class="cfb cf5f"></i><br
+  ><i class="cfb cf60"></i
+  ><i class="cfb cf61"></i
+  ><i class="cfb cf62"></i
+  ><i class="cfb cf63"></i
+  ><i class="cfb cf64"></i
+  ><i class="cfb cf65"></i
+  ><i class="cfb cf66"></i
+  ><i class="cfb cf67"></i
+  ><i class="cfb cf68"></i
+  ><i class="cfb cf69"></i
+  ><i class="cfb cf6a"></i
+  ><i class="cfb cf6b"></i
+  ><i class="cfb cf6c"></i
+  ><i class="cfb cf6d"></i
+  ><i class="cfb cf6e"></i
+  ><i class="cfb cf6f"></i><br
+  ><i class="cfb cf70"></i
+  ><i class="cfb cf71"></i
+  ><i class="cfb cf72"></i
+  ><i class="cfb cf73"></i
+  ><i class="cfb cf74"></i
+  ><i class="cfb cf75"></i
+  ><i class="cfb cf76"></i
+  ><i class="cfb cf77"></i
+  ><i class="cfb cf78"></i
+  ><i class="cfb cf79"></i
+  ><i class="cfb cf7a"></i
+  ><i class="cfb cf7b"></i
+  ><i class="cfb cf7c"></i
+  ><i class="cfb cf7d"></i
+  ><i class="cfb cf7e"></i
+  ><i class="cfb cf7f"></i><br
+  >
+</p>
+</div><!-- block-bold -->
+
+
+
+<div class="sample">
+<div>
+  <p class="cft font32" aria-label="Oblique"
+    ><i class="cfp cfo cf4f"></i
+    ><i class="cfp cfo cf62"></i
+    ><i class="cfp cfo cf6c"></i
+    ><i class="cfp cfo cf69"></i
+    ><i class="cfp cfo cf71"></i
+    ><i class="cfp cfo cf75"></i
+    ><i class="cfp cfo cf65"></i
+  ></p><!-- Oblique -->
+<p class="cft font16"
+  ><i class="cfo cf20"></i
+  ><i class="cfo cf21"></i
+  ><i class="cfo cf22"></i
+  ><i class="cfo cf23"></i
+  ><i class="cfo cf24"></i
+  ><i class="cfo cf25"></i
+  ><i class="cfo cf26"></i
+  ><i class="cfo cf27"></i
+  ><i class="cfo cf28"></i
+  ><i class="cfo cf29"></i
+  ><i class="cfo cf2a"></i
+  ><i class="cfo cf2b"></i
+  ><i class="cfo cf2c"></i
+  ><i class="cfo cf2d"></i
+  ><i class="cfo cf2e"></i
+  ><i class="cfo cf2f"></i><br
+  ><i class="cfo cf30"></i
+  ><i class="cfo cf31"></i
+  ><i class="cfo cf32"></i
+  ><i class="cfo cf33"></i
+  ><i class="cfo cf34"></i
+  ><i class="cfo cf35"></i
+  ><i class="cfo cf36"></i
+  ><i class="cfo cf37"></i
+  ><i class="cfo cf38"></i
+  ><i class="cfo cf39"></i
+  ><i class="cfo cf3a"></i
+  ><i class="cfo cf3b"></i
+  ><i class="cfo cf3c"></i
+  ><i class="cfo cf3d"></i
+  ><i class="cfo cf3e"></i
+  ><i class="cfo cf3f"></i><br
+  ><i class="cfo cf40"></i
+  ><i class="cfo cf41"></i
+  ><i class="cfo cf42"></i
+  ><i class="cfo cf43"></i
+  ><i class="cfo cf44"></i
+  ><i class="cfo cf45"></i
+  ><i class="cfo cf46"></i
+  ><i class="cfo cf47"></i
+  ><i class="cfo cf48"></i
+  ><i class="cfo cf49"></i
+  ><i class="cfo cf4a"></i
+  ><i class="cfo cf4b"></i
+  ><i class="cfo cf4c"></i
+  ><i class="cfo cf4d"></i
+  ><i class="cfo cf4e"></i
+  ><i class="cfo cf4f"></i><br
+  ><i class="cfo cf50"></i
+  ><i class="cfo cf51"></i
+  ><i class="cfo cf52"></i
+  ><i class="cfo cf53"></i
+  ><i class="cfo cf54"></i
+  ><i class="cfo cf55"></i
+  ><i class="cfo cf56"></i
+  ><i class="cfo cf57"></i
+  ><i class="cfo cf58"></i
+  ><i class="cfo cf59"></i
+  ><i class="cfo cf5a"></i
+  ><i class="cfo cf5b"></i
+  ><i class="cfo cf5c"></i
+  ><i class="cfo cf5d"></i
+  ><i class="cfo cf5e"></i
+  ><i class="cfo cf5f"></i><br
+  ><i class="cfo cf60"></i
+  ><i class="cfo cf61"></i
+  ><i class="cfo cf62"></i
+  ><i class="cfo cf63"></i
+  ><i class="cfo cf64"></i
+  ><i class="cfo cf65"></i
+  ><i class="cfo cf66"></i
+  ><i class="cfo cf67"></i
+  ><i class="cfo cf68"></i
+  ><i class="cfo cf69"></i
+  ><i class="cfo cf6a"></i
+  ><i class="cfo cf6b"></i
+  ><i class="cfo cf6c"></i
+  ><i class="cfo cf6d"></i
+  ><i class="cfo cf6e"></i
+  ><i class="cfo cf6f"></i><br
+  ><i class="cfo cf70"></i
+  ><i class="cfo cf71"></i
+  ><i class="cfo cf72"></i
+  ><i class="cfo cf73"></i
+  ><i class="cfo cf74"></i
+  ><i class="cfo cf75"></i
+  ><i class="cfo cf76"></i
+  ><i class="cfo cf77"></i
+  ><i class="cfo cf78"></i
+  ><i class="cfo cf79"></i
+  ><i class="cfo cf7a"></i
+  ><i class="cfo cf7b"></i
+  ><i class="cfo cf7c"></i
+  ><i class="cfo cf7d"></i
+  ><i class="cfo cf7e"></i
+  ><i class="cfo cf7f"></i><br
+  >
+</p>
+</div>
+<p class="cft font64"
+  ><i class="cfo cf20"></i
+  ><i class="cfo cf21"></i
+  ><i class="cfo cf22"></i
+  ><i class="cfo cf23"></i
+  ><i class="cfo cf24"></i
+  ><i class="cfo cf25"></i
+  ><i class="cfo cf26"></i
+  ><i class="cfo cf27"></i
+  ><i class="cfo cf28"></i
+  ><i class="cfo cf29"></i
+  ><i class="cfo cf2a"></i
+  ><i class="cfo cf2b"></i
+  ><i class="cfo cf2c"></i
+  ><i class="cfo cf2d"></i
+  ><i class="cfo cf2e"></i
+  ><i class="cfo cf2f"></i><br
+  ><i class="cfo cf30"></i
+  ><i class="cfo cf31"></i
+  ><i class="cfo cf32"></i
+  ><i class="cfo cf33"></i
+  ><i class="cfo cf34"></i
+  ><i class="cfo cf35"></i
+  ><i class="cfo cf36"></i
+  ><i class="cfo cf37"></i
+  ><i class="cfo cf38"></i
+  ><i class="cfo cf39"></i
+  ><i class="cfo cf3a"></i
+  ><i class="cfo cf3b"></i
+  ><i class="cfo cf3c"></i
+  ><i class="cfo cf3d"></i
+  ><i class="cfo cf3e"></i
+  ><i class="cfo cf3f"></i><br
+  ><i class="cfo cf40"></i
+  ><i class="cfo cf41"></i
+  ><i class="cfo cf42"></i
+  ><i class="cfo cf43"></i
+  ><i class="cfo cf44"></i
+  ><i class="cfo cf45"></i
+  ><i class="cfo cf46"></i
+  ><i class="cfo cf47"></i
+  ><i class="cfo cf48"></i
+  ><i class="cfo cf49"></i
+  ><i class="cfo cf4a"></i
+  ><i class="cfo cf4b"></i
+  ><i class="cfo cf4c"></i
+  ><i class="cfo cf4d"></i
+  ><i class="cfo cf4e"></i
+  ><i class="cfo cf4f"></i><br
+  ><i class="cfo cf50"></i
+  ><i class="cfo cf51"></i
+  ><i class="cfo cf52"></i
+  ><i class="cfo cf53"></i
+  ><i class="cfo cf54"></i
+  ><i class="cfo cf55"></i
+  ><i class="cfo cf56"></i
+  ><i class="cfo cf57"></i
+  ><i class="cfo cf58"></i
+  ><i class="cfo cf59"></i
+  ><i class="cfo cf5a"></i
+  ><i class="cfo cf5b"></i
+  ><i class="cfo cf5c"></i
+  ><i class="cfo cf5d"></i
+  ><i class="cfo cf5e"></i
+  ><i class="cfo cf5f"></i><br
+  ><i class="cfo cf60"></i
+  ><i class="cfo cf61"></i
+  ><i class="cfo cf62"></i
+  ><i class="cfo cf63"></i
+  ><i class="cfo cf64"></i
+  ><i class="cfo cf65"></i
+  ><i class="cfo cf66"></i
+  ><i class="cfo cf67"></i
+  ><i class="cfo cf68"></i
+  ><i class="cfo cf69"></i
+  ><i class="cfo cf6a"></i
+  ><i class="cfo cf6b"></i
+  ><i class="cfo cf6c"></i
+  ><i class="cfo cf6d"></i
+  ><i class="cfo cf6e"></i
+  ><i class="cfo cf6f"></i><br
+  ><i class="cfo cf70"></i
+  ><i class="cfo cf71"></i
+  ><i class="cfo cf72"></i
+  ><i class="cfo cf73"></i
+  ><i class="cfo cf74"></i
+  ><i class="cfo cf75"></i
+  ><i class="cfo cf76"></i
+  ><i class="cfo cf77"></i
+  ><i class="cfo cf78"></i
+  ><i class="cfo cf79"></i
+  ><i class="cfo cf7a"></i
+  ><i class="cfo cf7b"></i
+  ><i class="cfo cf7c"></i
+  ><i class="cfo cf7d"></i
+  ><i class="cfo cf7e"></i
+  ><i class="cfo cf7f"></i><br
+  >
+</p>
+</div><!-- block-oblique -->
+
+
+
+<div class="sample">
+<div>
+  <p class="cft font24" aria-label="Proportional"
+    ><i class="cfp cfm cf50"></i
+    ><i class="cfp cfm cf72"></i
+    ><i class="cfp cfm cf6f"></i
+    ><i class="cfp cfm cf70"></i
+    ><i class="cfp cfm cf6f"></i
+    ><i class="cfp cfm cf72"></i
+    ><i class="cfp cfm cf74"></i
+    ><i class="cfp cfm cf69"></i
+    ><i class="cfp cfm cf6f"></i
+    ><i class="cfp cfm cf6e"></i
+    ><i class="cfp cfm cf61"></i
+    ><i class="cfp cfm cf6c"></i
+  ></p><!-- Proportional -->
+<p class="cft font16"
+  ><i class="cfp cf20"></i
+  ><i class="cfp cf21"></i
+  ><i class="cfp cf22"></i
+  ><i class="cfp cf23"></i
+  ><i class="cfp cf24"></i
+  ><i class="cfp cf25"></i
+  ><i class="cfp cf26"></i
+  ><i class="cfp cf27"></i
+  ><i class="cfp cf28"></i
+  ><i class="cfp cf29"></i
+  ><i class="cfp cf2a"></i
+  ><i class="cfp cf2b"></i
+  ><i class="cfp cf2c"></i
+  ><i class="cfp cf2d"></i
+  ><i class="cfp cf2e"></i
+  ><i class="cfp cf2f"></i><br
+  ><i class="cfp cf30"></i
+  ><i class="cfp cf31"></i
+  ><i class="cfp cf32"></i
+  ><i class="cfp cf33"></i
+  ><i class="cfp cf34"></i
+  ><i class="cfp cf35"></i
+  ><i class="cfp cf36"></i
+  ><i class="cfp cf37"></i
+  ><i class="cfp cf38"></i
+  ><i class="cfp cf39"></i
+  ><i class="cfp cf3a"></i
+  ><i class="cfp cf3b"></i
+  ><i class="cfp cf3c"></i
+  ><i class="cfp cf3d"></i
+  ><i class="cfp cf3e"></i
+  ><i class="cfp cf3f"></i><br
+  ><i class="cfp cf40"></i
+  ><i class="cfp cf41"></i
+  ><i class="cfp cf42"></i
+  ><i class="cfp cf43"></i
+  ><i class="cfp cf44"></i
+  ><i class="cfp cf45"></i
+  ><i class="cfp cf46"></i
+  ><i class="cfp cf47"></i
+  ><i class="cfp cf48"></i
+  ><i class="cfp cf49"></i
+  ><i class="cfp cf4a"></i
+  ><i class="cfp cf4b"></i
+  ><i class="cfp cf4c"></i
+  ><i class="cfp cf4d"></i
+  ><i class="cfp cf4e"></i
+  ><i class="cfp cf4f"></i><br
+  ><i class="cfp cf50"></i
+  ><i class="cfp cf51"></i
+  ><i class="cfp cf52"></i
+  ><i class="cfp cf53"></i
+  ><i class="cfp cf54"></i
+  ><i class="cfp cf55"></i
+  ><i class="cfp cf56"></i
+  ><i class="cfp cf57"></i
+  ><i class="cfp cf58"></i
+  ><i class="cfp cf59"></i
+  ><i class="cfp cf5a"></i
+  ><i class="cfp cf5b"></i
+  ><i class="cfp cf5c"></i
+  ><i class="cfp cf5d"></i
+  ><i class="cfp cf5e"></i
+  ><i class="cfp cf5f"></i><br
+  ><i class="cfp cf60"></i
+  ><i class="cfp cf61"></i
+  ><i class="cfp cf62"></i
+  ><i class="cfp cf63"></i
+  ><i class="cfp cf64"></i
+  ><i class="cfp cf65"></i
+  ><i class="cfp cf66"></i
+  ><i class="cfp cf67"></i
+  ><i class="cfp cf68"></i
+  ><i class="cfp cf69"></i
+  ><i class="cfp cf6a"></i
+  ><i class="cfp cf6b"></i
+  ><i class="cfp cf6c"></i
+  ><i class="cfp cf6d"></i
+  ><i class="cfp cf6e"></i
+  ><i class="cfp cf6f"></i><br
+  ><i class="cfp cf70"></i
+  ><i class="cfp cf71"></i
+  ><i class="cfp cf72"></i
+  ><i class="cfp cf73"></i
+  ><i class="cfp cf74"></i
+  ><i class="cfp cf75"></i
+  ><i class="cfp cf76"></i
+  ><i class="cfp cf77"></i
+  ><i class="cfp cf78"></i
+  ><i class="cfp cf79"></i
+  ><i class="cfp cf7a"></i
+  ><i class="cfp cf7b"></i
+  ><i class="cfp cf7c"></i
+  ><i class="cfp cf7d"></i
+  ><i class="cfp cf7e"></i
+  ><i class="cfp cf7f"></i><br
+  >
+</p>
+</div>
+<p class="cft font64"
+  ><i class="cfp cf20"></i
+  ><i class="cfp cf21"></i
+  ><i class="cfp cf22"></i
+  ><i class="cfp cf23"></i
+  ><i class="cfp cf24"></i
+  ><i class="cfp cf25"></i
+  ><i class="cfp cf26"></i
+  ><i class="cfp cf27"></i
+  ><i class="cfp cf28"></i
+  ><i class="cfp cf29"></i
+  ><i class="cfp cf2a"></i
+  ><i class="cfp cf2b"></i
+  ><i class="cfp cf2c"></i
+  ><i class="cfp cf2d"></i
+  ><i class="cfp cf2e"></i
+  ><i class="cfp cf2f"></i><br
+  ><i class="cfp cf30"></i
+  ><i class="cfp cf31"></i
+  ><i class="cfp cf32"></i
+  ><i class="cfp cf33"></i
+  ><i class="cfp cf34"></i
+  ><i class="cfp cf35"></i
+  ><i class="cfp cf36"></i
+  ><i class="cfp cf37"></i
+  ><i class="cfp cf38"></i
+  ><i class="cfp cf39"></i
+  ><i class="cfp cf3a"></i
+  ><i class="cfp cf3b"></i
+  ><i class="cfp cf3c"></i
+  ><i class="cfp cf3d"></i
+  ><i class="cfp cf3e"></i
+  ><i class="cfp cf3f"></i><br
+  ><i class="cfp cf40"></i
+  ><i class="cfp cf41"></i
+  ><i class="cfp cf42"></i
+  ><i class="cfp cf43"></i
+  ><i class="cfp cf44"></i
+  ><i class="cfp cf45"></i
+  ><i class="cfp cf46"></i
+  ><i class="cfp cf47"></i
+  ><i class="cfp cf48"></i
+  ><i class="cfp cf49"></i
+  ><i class="cfp cf4a"></i
+  ><i class="cfp cf4b"></i
+  ><i class="cfp cf4c"></i
+  ><i class="cfp cf4d"></i
+  ><i class="cfp cf4e"></i
+  ><i class="cfp cf4f"></i><br
+  ><i class="cfp cf50"></i
+  ><i class="cfp cf51"></i
+  ><i class="cfp cf52"></i
+  ><i class="cfp cf53"></i
+  ><i class="cfp cf54"></i
+  ><i class="cfp cf55"></i
+  ><i class="cfp cf56"></i
+  ><i class="cfp cf57"></i
+  ><i class="cfp cf58"></i
+  ><i class="cfp cf59"></i
+  ><i class="cfp cf5a"></i
+  ><i class="cfp cf5b"></i
+  ><i class="cfp cf5c"></i
+  ><i class="cfp cf5d"></i
+  ><i class="cfp cf5e"></i
+  ><i class="cfp cf5f"></i><br
+  ><i class="cfp cf60"></i
+  ><i class="cfp cf61"></i
+  ><i class="cfp cf62"></i
+  ><i class="cfp cf63"></i
+  ><i class="cfp cf64"></i
+  ><i class="cfp cf65"></i
+  ><i class="cfp cf66"></i
+  ><i class="cfp cf67"></i
+  ><i class="cfp cf68"></i
+  ><i class="cfp cf69"></i
+  ><i class="cfp cf6a"></i
+  ><i class="cfp cf6b"></i
+  ><i class="cfp cf6c"></i
+  ><i class="cfp cf6d"></i
+  ><i class="cfp cf6e"></i
+  ><i class="cfp cf6f"></i><br
+  ><i class="cfp cf70"></i
+  ><i class="cfp cf71"></i
+  ><i class="cfp cf72"></i
+  ><i class="cfp cf73"></i
+  ><i class="cfp cf74"></i
+  ><i class="cfp cf75"></i
+  ><i class="cfp cf76"></i
+  ><i class="cfp cf77"></i
+  ><i class="cfp cf78"></i
+  ><i class="cfp cf79"></i
+  ><i class="cfp cf7a"></i
+  ><i class="cfp cf7b"></i
+  ><i class="cfp cf7c"></i
+  ><i class="cfp cf7d"></i
+  ><i class="cfp cf7e"></i
+  ><i class="cfp cf7f"></i><br
+  >
+</p>
+</div><!-- block-proportional -->
+
+
+
+<div id="block-appendix" class="font48">
+  <p class="cft font48" aria-label="Appendix"
+    ><i class="cfp cf2a mark"></i
+    ><i class="cfp cf2a mark"></i
+    ><i class="cfp cfm cf20"></i
+    ><i class="cfp cfm cf41"></i
+    ><i class="cfp cfm cf70"></i
+    ><i class="cfp cfm cf70"></i
+    ><i class="cfp cfm cf65"></i
+    ><i class="cfp cfm cf6e"></i
+    ><i class="cfp cfm cf64"></i
+    ><i class="cfp cfm cf69"></i
+    ><i class="cfp cfm cf78"></i
+    ><i class="cfp cfm cf20"></i
+    ><i class="cfp cf2a mark"></i
+    ><i class="cfp cf2a mark"></i
+  ></p><!-- ** Appendix ** -->
+<div class="cfc"><i class="cf cf20"></i></div>
+<div class="cfc"><i class="cf cf21"></i></div>
+<div class="cfc"><i class="cf cf22"></i></div>
+<div class="cfc"><i class="cf cf23"></i></div>
+<div class="cfc"><i class="cf cf24"></i></div>
+<div class="cfc"><i class="cf cf25"></i></div>
+<div class="cfc"><i class="cf cf26"></i></div>
+<div class="cfc"><i class="cf cf27"></i></div>
+<div class="cfc"><i class="cf cf28"></i></div>
+<div class="cfc"><i class="cf cf29"></i></div>
+<div class="cfc"><i class="cf cf2a"></i></div>
+<div class="cfc"><i class="cf cf2b"></i></div>
+<div class="cfc"><i class="cf cf2c"></i></div>
+<div class="cfc"><i class="cf cf2d"></i></div>
+<div class="cfc"><i class="cf cf2e"></i></div>
+<div class="cfc"><i class="cf cf2f"></i></div><br>
+<div class="cfc"><i class="cf cf30"></i></div>
+<div class="cfc"><i class="cf cf31"></i></div>
+<div class="cfc"><i class="cf cf32"></i></div>
+<div class="cfc"><i class="cf cf33"></i></div>
+<div class="cfc"><i class="cf cf34"></i></div>
+<div class="cfc"><i class="cf cf35"></i></div>
+<div class="cfc"><i class="cf cf36"></i></div>
+<div class="cfc"><i class="cf cf37"></i></div>
+<div class="cfc"><i class="cf cf38"></i></div>
+<div class="cfc"><i class="cf cf39"></i></div>
+<div class="cfc"><i class="cf cf3a"></i></div>
+<div class="cfc"><i class="cf cf3b"></i></div>
+<div class="cfc"><i class="cf cf3c"></i></div>
+<div class="cfc"><i class="cf cf3d"></i></div>
+<div class="cfc"><i class="cf cf3e"></i></div>
+<div class="cfc"><i class="cf cf3f"></i></div><br>
+<div class="cfc"><i class="cf cf40"></i></div>
+<div class="cfc"><i class="cf cf41"></i></div>
+<div class="cfc"><i class="cf cf42"></i></div>
+<div class="cfc"><i class="cf cf43"></i></div>
+<div class="cfc"><i class="cf cf44"></i></div>
+<div class="cfc"><i class="cf cf45"></i></div>
+<div class="cfc"><i class="cf cf46"></i></div>
+<div class="cfc"><i class="cf cf47"></i></div>
+<div class="cfc"><i class="cf cf48"></i></div>
+<div class="cfc"><i class="cf cf49"></i></div>
+<div class="cfc"><i class="cf cf4a"></i></div>
+<div class="cfc"><i class="cf cf4b"></i></div>
+<div class="cfc"><i class="cf cf4c"></i></div>
+<div class="cfc"><i class="cf cf4d"></i></div>
+<div class="cfc"><i class="cf cf4e"></i></div>
+<div class="cfc"><i class="cf cf4f"></i></div><br>
+<div class="cfc"><i class="cf cf50"></i></div>
+<div class="cfc"><i class="cf cf51"></i></div>
+<div class="cfc"><i class="cf cf52"></i></div>
+<div class="cfc"><i class="cf cf53"></i></div>
+<div class="cfc"><i class="cf cf54"></i></div>
+<div class="cfc"><i class="cf cf55"></i></div>
+<div class="cfc"><i class="cf cf56"></i></div>
+<div class="cfc"><i class="cf cf57"></i></div>
+<div class="cfc"><i class="cf cf58"></i></div>
+<div class="cfc"><i class="cf cf59"></i></div>
+<div class="cfc"><i class="cf cf5a"></i></div>
+<div class="cfc"><i class="cf cf5b"></i></div>
+<div class="cfc"><i class="cf cf5c"></i></div>
+<div class="cfc"><i class="cf cf5d"></i></div>
+<div class="cfc"><i class="cf cf5e"></i></div>
+<div class="cfc"><i class="cf cf5f"></i></div><br>
+<div class="cfc"><i class="cf cf60"></i></div>
+<div class="cfc"><i class="cf cf61"></i></div>
+<div class="cfc"><i class="cf cf62"></i></div>
+<div class="cfc"><i class="cf cf63"></i></div>
+<div class="cfc"><i class="cf cf64"></i></div>
+<div class="cfc"><i class="cf cf65"></i></div>
+<div class="cfc"><i class="cf cf66"></i></div>
+<div class="cfc"><i class="cf cf67"></i></div>
+<div class="cfc"><i class="cf cf68"></i></div>
+<div class="cfc"><i class="cf cf69"></i></div>
+<div class="cfc"><i class="cf cf6a"></i></div>
+<div class="cfc"><i class="cf cf6b"></i></div>
+<div class="cfc"><i class="cf cf6c"></i></div>
+<div class="cfc"><i class="cf cf6d"></i></div>
+<div class="cfc"><i class="cf cf6e"></i></div>
+<div class="cfc"><i class="cf cf6f"></i></div><br>
+<div class="cfc"><i class="cf cf70"></i></div>
+<div class="cfc"><i class="cf cf71"></i></div>
+<div class="cfc"><i class="cf cf72"></i></div>
+<div class="cfc"><i class="cf cf73"></i></div>
+<div class="cfc"><i class="cf cf74"></i></div>
+<div class="cfc"><i class="cf cf75"></i></div>
+<div class="cfc"><i class="cf cf76"></i></div>
+<div class="cfc"><i class="cf cf77"></i></div>
+<div class="cfc"><i class="cf cf78"></i></div>
+<div class="cfc"><i class="cf cf79"></i></div>
+<div class="cfc"><i class="cf cf7a"></i></div>
+<div class="cfc"><i class="cf cf7b"></i></div>
+<div class="cfc"><i class="cf cf7c"></i></div>
+<div class="cfc"><i class="cf cf7d"></i></div>
+<div class="cfc"><i class="cf cf7e"></i></div>
+<div class="cfc"><i class="cf cf7f"></i></div><br>
+</div><!-- #block-appendix -->
