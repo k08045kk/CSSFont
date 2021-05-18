@@ -6,7 +6,7 @@ The font for ASCII code using CSS.
 
 
 ## Sample
-[Sample Page](https://k08045kk.github.io/CSSFont/sample/index.html)
+[Sample Page](https://k08045kk.github.io/CSSFont/sample/)
 
 ![sample](https://user-images.githubusercontent.com/36192561/118573668-f90cce00-b7bd-11eb-94b7-83f3864729d0.png)
 
