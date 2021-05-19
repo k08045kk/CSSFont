@@ -64,6 +64,7 @@ input[type=number] {
   font-family: monospace, monospace;
   line-height: 1;
   unicode-bidi: bidi-override;
+  white-space: nowrap;
 }
 #app-outtext {
   white-space: pre;
@@ -229,18 +230,18 @@ input[type=number] {
             ><i class="cfp cf79"></i
           ></td>
           <td class="app-options-input"><label><input id="app-checkbox-font-family" type="checkbox"
-            >&thinsp;<i class="cf cf70"></i
-            ><i class="cfp cfm cf72"></i
-            ><i class="cfp cfm cf6f"></i
-            ><i class="cfp cfm cf70"></i
-            ><i class="cfp cfm cf6f"></i
-            ><i class="cfp cfm cf72"></i
-            ><i class="cfp cfm cf74"></i
-            ><i class="cfp cfm cf69"></i
-            ><i class="cfp cfm cf6f"></i
-            ><i class="cfp cfm cf6e"></i
-            ><i class="cfp cfm cf61"></i
-            ><i class="cfp cfm cf6c"></i
+            >&thinsp;<i class="cfp cf70"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf70"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf72"></i
+            ><i class="cfp cf74"></i
+            ><i class="cfp cf69"></i
+            ><i class="cfp cf6f"></i
+            ><i class="cfp cf6e"></i
+            ><i class="cfp cf61"></i
+            ><i class="cfp cf6c"></i
           ></label></td><!-- proportional -->
         </tr>
         <tr>
@@ -435,6 +436,9 @@ input[type=number] {
 (function() {
   // サイト設定読込み
   const getLocalStorage = function() {
+    if (!localStorage) {
+      return;
+    }
     let options = null;
     const input = localStorage.getItem('CSSFontInput');
     if (input) {
@@ -481,7 +485,7 @@ input[type=number] {
   };
   const update = function() {
     convert();
-    if (document.getElementById('app-checkbox-save').checked) {
+    if (localStorage && document.getElementById('app-checkbox-save').checked) {
       setLocalStorage();
     }
   };
@@ -564,9 +568,9 @@ input[type=number] {
   });
   document.getElementById('app-checkbox-font-family').addEventListener('change', function(event) {
     const func = event.target.checked 
-               ? (element) => { element.classList.add('cfp'); } 
-               : (element) => { element.classList.remove('cfp'); } 
-    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+               ? function(element) { element.classList.add('cfp'); } 
+               : function(element) { element.classList.remove('cfp'); } 
+    Array.prototype.slice.call(document.querySelectorAll('#app-output > .cf')).forEach(func);
     document.getElementById('app-outtext').style.fontFamily 
         = event.target.checked ? 'sans-serif' : 'monospace, monospace';
     update();
@@ -574,7 +578,7 @@ input[type=number] {
   document.getElementById('app-font-width').addEventListener('change', function(event) {
     const width = event.target.value;
     const cfset = {'cfr':['cfm','cfb','400'], 'cfm':['cfr','cfb','500'], 'cfb':['cfr','cfm','700']};
-    [...document.querySelectorAll('#app-output > .cf')].forEach((element) => {
+    Array.prototype.slice.call(document.querySelectorAll('#app-output > .cf')).forEach(function() {
       element.classList.replace(cfset[width][0], width);
       element.classList.replace(cfset[width][1], width);
     });
@@ -601,25 +605,25 @@ input[type=number] {
   });
   document.getElementById('app-checkbox-oblique').addEventListener('change', function(event) {
     const func = event.target.checked 
-               ? (element) => { element.classList.add('cfo'); } 
-               : (element) => { element.classList.remove('cfo'); } 
-    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+               ? function(element) { element.classList.add('cfo'); } 
+               : function(element) { element.classList.remove('cfo'); } 
+    Array.prototype.slice.call(document.querySelectorAll('#app-output > .cf')).forEach(func);
     document.getElementById('app-outtext').style.fontStyle 
         = document.getElementById('app-checkbox-oblique').checked ? 'oblique' : 'normal';
     update();
   });
   document.getElementById('app-checkbox-flip-horizontal').addEventListener('change', function(event) {
     const func = event.target.checked 
-               ? (e) => { e.classList.add('cf-flip-horizontal'); } 
-               : (e) => { e.classList.remove('cf-flip-horizontal'); } 
-    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+               ? function(e) { e.classList.add('cf-flip-horizontal'); } 
+               : function(e) { e.classList.remove('cf-flip-horizontal'); } 
+    Array.prototype.slice.call(document.querySelectorAll('#app-output > .cf')).forEach(func);
     update();
   });
   document.getElementById('app-checkbox-flip-vertical').addEventListener('change', function(event) {
     const func = event.target.checked 
-               ? (e) => { e.classList.add('cf-flip-vertical'); } 
-               : (e) => { e.classList.remove('cf-flip-vertical'); } 
-    [...document.querySelectorAll('#app-output > .cf')].forEach(func);
+               ? function(e) { e.classList.add('cf-flip-vertical'); } 
+               : function(e) { e.classList.remove('cf-flip-vertical'); } 
+    Array.prototype.slice.call(document.querySelectorAll('#app-output > .cf')).forEach(func);
     update();
   });
   document.getElementById('app-direction').addEventListener('change', function(event) {
@@ -631,11 +635,14 @@ input[type=number] {
   document.getElementById('app-checkbox-save').addEventListener('change', function(event) {
     if (event.target.checked) {
       update();
-    } else {
+    } else if (localStorage) {
       localStorage.removeItem('CSSFontInput');
       localStorage.removeItem('CSSFontOptions');
     }
   });
+  if (!localStorage) {
+    document.getElementById('app-checkbox-save').disabled = true;
+  }
   getLocalStorage();
   convert();
 })();
