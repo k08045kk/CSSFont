@@ -1,11 +1,11 @@
-/*! cssfont.css v0.1 | MIT License | github.com/k08045kk/CSSFont/blob/master/LICENSE */
+/*! cssfont.css v0.1.0 | MIT License | github.com/k08045kk/CSSFont/blob/master/LICENSE */
 /**
  * @name        cssfont.css
  * @description The font for ASCII code using CSS.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/CSSFont/blob/master/LICENSE
- * @version     0.1
- * @since       0.1 - 20210518 - First edition
+ * @version     0.1.0
+ * @since       0.1.0 - 20210518 - First edition
  * @see         https://github.com/k08045kk/CSSFont
  */
 /**************************************************************/
@@ -478,7 +478,7 @@
   left:  -.03125em; /*  .5px */
   bottom:-.28125em; /*  4.5px */
 }
-/* Note: 「&」A is expressed as a combination of epsilon and t. */
+/* Note: 「&」 is expressed as a combination of epsilon and t. */
 
 
 /* 27(39):「'」 --------------------------------------------- */
